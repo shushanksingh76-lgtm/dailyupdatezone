@@ -1,36 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <title>Daily Update Zone</title>
 
-    <!-- SEO -->
-    <meta charset="UTF-8">
-    <meta name="description" content="Daily Update Zone - Daily news, study updates and important notices.">
-    <meta name="keywords" content="daily update, news, study update, notice, education">
-    <meta name="author" content="Anuj">
-
-    <!-- Mobile Friendly -->
+    <!-- MOBILE FRIENDLY (MOST IMPORTANT) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
-        body{margin:0;font-family:Arial,sans-serif;background:#f4f6f8;}
-        header{background:#1e90ff;color:#fff;text-align:center;padding:15px;}
-        nav{background:#333;position:sticky;top:0;text-align:center;}
-        nav a{display:inline-block;color:#fff;padding:10px 12px;text-decoration:none;font-size:14px;}
-        nav a:hover{background:#555;}
-        .breaking{background:#ff3333;color:#fff;padding:8px;font-weight:bold;}
-        section{padding:15px;}
-        .box{background:#fff;padding:15px;margin-bottom:15px;border-radius:6px;box-shadow:0 0 5px #ccc;}
-        footer{background:#222;color:#fff;text-align:center;padding:10px;font-size:14px;}
-        .date{font-size:14px;margin-top:5px;}
-        .whatsapp{
-            display:inline-block;background:#25D366;color:#fff;
-            padding:12px 18px;border-radius:5px;text-decoration:none;
-            margin-top:10px;
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: #f4f6f8;
         }
-        @media(max-width:600px){
-            header h1{font-size:22px;}
-            nav a{font-size:13px;padding:8px;}
+        header {
+            background: #1e90ff;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+        nav {
+            background: #333;
+            text-align: center;
+            padding: 8px;
+        }
+        nav a {
+            color: white;
+            margin: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+        }
+        nav a:hover {
+            color: yellow;
+        }
+        .content {
+            padding: 15px;
+        }
+        .box {
+            background: white;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+        }
+        .box a {
+            text-decoration: none;
+            color: black;
+        }
+        .box a:hover {
+            color: blue;
+        }
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        /* EXTRA MOBILE SUPPORT */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 22px;
+            }
+            .box h2 {
+                font-size: 18px;
+            }
+            nav a {
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -40,98 +77,45 @@
 <header>
     <h1>Daily Update Zone</h1>
     <p>This Website is under maintence</p>
-    <div class="date" id="todayDate"></div>
 </header>
 
-<div class="breaking">
-    🔴 Breaking: Class 10 students ke liye naye study updates upload hue!
-</div>
-
 <nav>
-    <a href="#home">Home</a>
-    <a href="#update">Update</a>
-    <a href="#news">News</a>
-    <a href="#study">Study</a>
-    <a href="#notice">Notice</a>
-    <a href="#contact">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="news.html">News</a>
+    <a href="study.html">Study</a>
+    <a href="notice.html">Notice</a>
+    <a href="contact.html">contact</a>
+
 </nav>
 
-<section id="home">
-    <div class="box">
-        <h2>🏠 Home</h2>
-        <p>Daily Update Zone par aapko daily updates, news, study material
-        aur important notices ek hi jagah milte hain.</p>
-    </div>
-</section>
+<div class="content">
 
-<section id="update">
     <div class="box">
-        <h2>📰 Aaj Ki Update</h2>
-        <ul>
-            <li>Class 10 Hindi ke important questions add kiye gaye.</li>
-            <li>Board exam preparation tips update hue.</li>
-            <li>New study notes available.</li>
-        </ul>
+        <h2><a href="update.html">📰 Aaj Ki Update</a></h2>
+        <p>Aaj ki sabse important updates dekhne ke liye click karein.</p>
     </div>
-</section>
 
-<section id="news">
     <div class="box">
-        <h2>🗞️ News</h2>
-        <ul>
-            <li>Education system me naye changes announce hue.</li>
-            <li>Board exams ko lekar nayi guidelines jaari.</li>
-            <li>Online learning resources badhe.</li>
-        </ul>
+        <h2><a href="news.html">🗞️ News</a></h2>
+        <p>Latest education aur general news yahan milegi.</p>
     </div>
-</section>
 
-<section id="study">
     <div class="box">
-        <h2>📚 Study Update</h2>
-        <ul>
-            <li>Hindi aur Maths ke notes upload.</li>
-            <li>Science ke important topics explain kiye gaye.</li>
-            <li>Practice questions add hue.</li>
-        </ul>
+        <h2><a href="study.html">📚 Study Update</a></h2>
+        <p>Notes, syllabus aur study material.</p>
     </div>
-</section>
 
-<section id="notice">
     <div class="box">
-        <h2>📢 Notice</h2>
-        <ul>
-            <li>Bihar Board exam date notice jaari.</li>
-            <li>Admit card download process start.</li>
-            <li>Result update jald hi aayega.</li>
-        </ul>
+        <h2><a href="notice.html">📢 Notice</a></h2>
+        <p>Exam, result aur important notices.</p>
     </div>
-</section>
 
-<section id="contact">
-    <div class="box">
-        <h2>📞 Contact</h2>
-        <p>Latest updates WhatsApp par paane ke liye join karein.</p>
-
-        <!-- अपना नंबर डालें -->
-        <a class="whatsapp" href="https://wa.me/919876543210" target="_blank">
-            👉 Join WhatsApp
-        </a>
-    </div>
-</section>
+</div>
 
 <footer>
-    © 2026 Daily Update Zone
+    <p>© 2026 Daily Update Zone | Made by Shushank</p>
 </footer>
-
-<script>
-    // Auto Date
-    const d = new Date();
-    document.getElementById("todayDate").innerText =
-        "📅 Date: " + d.toDateString();
-</script>
 
 </body>
 </html>
-
 
