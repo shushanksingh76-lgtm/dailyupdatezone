@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<title>News | Daily Update Zone</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, #1e90ff, #00bfff);
+    color: white;
+    text-align: center;
+    padding: 25px 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    top: 0; left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255,255,255,0.2), rgba(255,255,255,0.6), rgba(255,255,255,0.2));
+    transform: skewX(-25deg);
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    0% { left: -75%; }
+    100% { left: 125%; }
+}
+
+/* Content */
+.content {
+    padding: 15px;
+}
+
+/* News Box */
+.news-box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    animation: slideFade 0.8s ease;
+    margin-bottom: 20px;
+}
+
+@keyframes slideFade {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+ul {
+    padding-left: 20px;
+}
+li {
+    margin-bottom: 12px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.back {
+    text-align: center;
+    margin-top: 20px;
+}
+.back a {
+    text-decoration: none;
+    color: blue;
+    font-size: 16px;
+}
+
+/* Date */
+.date {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+    li { font-size: 15px; }
+    header { padding: 20px 5px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🗞️ Bihar News & Board Updates 2026–Present</h1>
+    <p>Daily Update Zone</p>
+</header>
+
+<div class="content">
+
+<div class="date">📅 Date: <span id="todayDate"></span></div>
+
+<div class="news-box">
+<h2>📌 Bihar Board & Exam Updates</h2>
+<ul>
+<li>📌 Bihar Board Class 12 exams 2026 started from 2 Feb with guidelines and timings.</li>
+<li>📌 Nearly 7.6+ lakh students appeared on early days of Inter exams.</li>
+<li>📌 BSEB issued FIR & 2-year ban warning for illegal entry during exams.</li>
+<li>📌 Dummy & final admit cards released with correction opportunities (DElEd / Inter / Matric).</li>
+<li>📌 Around 28 lakh students registered for BSEB Class 10 & 12 exams.</li>
+<li>📌 Class 10 & 12 syllabus & model papers released online.</li>
+<li>📌 BiRSA revenue service strike continues; negotiations ongoing.</li>
+<li>📌 Flights delays / airport updates reported in Bihar cities (Patna etc.).</li>
+</ul>
+</div>
+
+<div class="back">
+<a href="index.html">⬅ Back to Home</a>
+</div>
+
+</div>
+
+<script>
+// Auto Date
+const d = new Date();
+document.getElementById("todayDate").innerText = d.toDateString();
+</script>
+
+</body>
+</html>
+
