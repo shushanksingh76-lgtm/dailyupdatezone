@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <title>Aaj Ki Update | Daily Update Zone</title>
+
+    <!-- Mobile Friendly -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        /* Body */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(90deg, #1e90ff, #00bfff);
+            color: white;
+            text-align: center;
+            padding: 25px 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Lighting Animation on Header */
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0; left: -75%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(120deg, rgba(255,255,255,0.2), rgba(255,255,255,0.6), rgba(255,255,255,0.2));
+            transform: skewX(-25deg);
+            animation: shine 3s infinite;
+        }
+        @keyframes shine {
+            0% { left: -75%; }
+            100% { left: 125%; }
+        }
+
+        /* Content */
+        .content {
+            padding: 15px;
+        }
+
+        /* Animated Box */
+        .box {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            animation: slideFade 0.8s ease;
+            margin-bottom: 20px;
+        }
+
+        @keyframes slideFade {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Lists */
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 12px;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        /* PDF Buttons */
+        .pdf-btn {
+            display: inline-block;
+            margin: 5px 5px 5px 0;
+            background: #ff5722;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .pdf-btn:hover {
+            background: #e64a19;
+        }
+
+        /* Back Link */
+        .back {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .back a {
+            text-decoration: none;
+            color: blue;
+            font-size: 16px;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 600px) {
+            li { font-size: 15px; }
+            .pdf-btn { font-size: 13px; padding: 8px 12px; }
+            header { padding: 20px 5px; }
+        }
+
+        /* Date */
+        .date {
+            text-align: center;
+            font-size: 14px;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>📰 Aaj Ki Update – Bihar Board & Exams 2026</h1>
+    <p>Daily Update Zone</p>
+</header>
+
+<div class="content">
+
+    <div class="date">📅 Date: <span id="todayDate"></span></div>
+
+    <div class="box">
+        <h2>📌 Bihar Board (BSEB) Exams – 2026 Schedule</h2>
+        <ul>
+            <li>📆 <strong>Intermediate (Class 12) Board Exams</strong><br>
+                Dates: 2 फरवरी 2026 – 13 फरवरी 2026<br>
+                Subjects: सभी Streams (Science, Commerce & Arts)<br>
+                Practical exams: जनवरी 2026 में आयोजित
+            </li>
+            <li>📆 <strong>Matric (Class 10) Board Exams</strong><br>
+                Dates: 17 फरवरी 2026 – 25 फरवरी 2026<br>
+                Theory papers दो shifts:<br>
+                • 9:30 AM – 12:45 PM<br>
+                • 2:00 PM – 5:15 PM
+            </li>
+            <li>📆 <strong>Compartment / Special Exams</strong><br>
+                Students जो पास नहीं हुए, Exams: Apr–May 2026
+            </li>
+        </ul>
+
+        <h3>📌 Other Important 2025–26 Exams in Bihar</h3>
+        <ul>
+            <li>📍 <strong>STET 2025 (Teacher Eligibility)</strong><br>
+                Exam Conducted: 14 Oct 2025<br>
+                Answer key / objections: Nov 2025<br>
+                Result भी जारी हो चुका है
+            </li>
+            <li>📍 <strong>BPSC Exams 2026</strong><br>
+                70th CCE main: Apr 2026<br>
+                Other recruitment exams listed (ASO etc.)
+            </li>
+            <li>📍 <strong>CSBC Bihar Police Driver/Constable 2026</strong><br>
+                PET: 12 Mar 2026<br>
+                Written / PET schedule official
+            </li>
+            <li>🏫 <strong>CTET Feb 2026</strong><br>
+                Dates: 7 & 8 Feb 2026<br>
+                Central Teacher Eligibility Test
+            </li>
+        </ul>
+
+        <h3>📥 Official PDF Downloads</h3>
+        <a class="pdf-btn" href="https://biharboardonline.bihar.gov.in/inter_12th_time_table_2026.pdf" target="_blank">Intermediate 12th PDF</a>
+        <a class="pdf-btn" href="https://biharboardonline.bihar.gov.in/matric_10th_time_table_2026.pdf" target="_blank">Matric 10th PDF</a>
+
+    </div>
+
+    <div class="back">
+        <a href="index.html">⬅ Back to Home</a>
+    </div>
+
+</div>
+
+<script>
+    // Auto Date
+    const d = new Date();
+    document.getElementById("todayDate").innerText = d.toDateString();
+</script>
+
+</body>
+</html>
+
