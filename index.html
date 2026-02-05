@@ -1,121 +1,177 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="hi">
 <head>
-    <title>Daily Update Zone</title>
+<meta charset="UTF-8">
+<title>Daily Update Zone | Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- MOBILE FRIENDLY (MOST IMPORTANT) -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- CSS starts -->
+<style>
+/* Body & Background */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(120deg, #89f7fe, #66a6ff);
+    animation: backgroundShift 15s infinite alternate;
+    transition: all 0.3s ease;
+}
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial;
-            background: #f4f6f8;
-        }
-        header {
-            background: #1e90ff;
-            color: white;
-            text-align: center;
-            padding: 15px;
-        }
-        nav {
-            background: #333;
-            text-align: center;
-            padding: 8px;
-        }
-        nav a {
-            color: white;
-            margin: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            display: inline-block;
-        }
-        nav a:hover {
-            color: yellow;
-        }
-        .content {
-            padding: 15px;
-        }
-        .box {
-            background: white;
-            padding: 15px;
-            margin-bottom: 15px;
-            border-radius: 6px;
-        }
-        .box a {
-            text-decoration: none;
-            color: black;
-        }
-        .box a:hover {
-            color: blue;
-        }
-        footer {
-            background: #222;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            font-size: 14px;
-        }
+/* Background Animation */
+@keyframes backgroundShift {
+    0% { background: linear-gradient(120deg, #89f7fe, #66a6ff); }
+    50% { background: linear-gradient(120deg, #f6d365, #fda085); }
+    100% { background: linear-gradient(120deg, #84fab0, #8fd3f4); }
+}
 
-        /* EXTRA MOBILE SUPPORT */
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 22px;
-            }
-            .box h2 {
-                font-size: 18px;
-            }
-            nav a {
-                font-size: 14px;
-            }
-        }
-    </style>
+/* Header with shining animation */
+header {
+    background: linear-gradient(90deg, #ff512f, #dd2476);
+    color: white;
+    text-align: center;
+    padding: 30px 10px;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 5px solid #fff;
+    animation: slideDown 1s ease-out forwards;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255,255,255,0.2), rgba(255,255,255,0.6), rgba(255,255,255,0.2));
+    transform: skewX(-25deg);
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    0% { left: -75%; }
+    100% { left: 125%; }
+}
+
+@keyframes slideDown {
+    0% { transform: translateY(-100px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Navigation Bar */
+nav {
+    background: #333;
+    text-align: center;
+    padding: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+nav a {
+    color: white;
+    margin: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffdd00;
+    transform: scale(1.1);
+}
+
+/* Content Cards */
+.content {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transform: translateY(50px);
+    opacity: 0;
+    animation: cardAppear 0.8s forwards;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+@keyframes cardAppear {
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    nav a { margin: 10px; font-size: 14px; }
+    .card { padding: 20px; }
+}
+</style>
+<!-- CSS ends -->
+
 </head>
-
 <body>
 
 <header>
-    <h1>Daily Update Zone</h1>
-    <p>This Website is under maintence</p>
+<h1>Daily Update Zone</h1>
+<p>Education & Exam Portal</p>
 </header>
 
 <nav>
-    <a href="index.html">Home</a>
-    <a href="news.html">News</a>
-    <a href="study.html">Study</a>
-    <a href="notice.html">Notice</a>
-    <a href="contact.html">contact</a>
-
+<a href="index.html">Home</a>
+<a href="news.html">News</a>
+<a href="bihar-board.html">Bihar Board</a>
+<a href="study.html">Study</a>
+<a href="notice.html">Notice</a>
+<a href="contact.html">Contact</a>
 </nav>
 
 <div class="content">
+<div class="card">
+<h2>Latest News</h2>
+<p>Click <a href="news.html">here</a> to see all Bihar Board & state exam updates.</p>
+</div>
 
-    <div class="box">
-        <h2><a href="update.html">📰 Aaj Ki Update</a></h2>
-        <p>Aaj ki sabse important updates dekhne ke liye click karein.</p>
-    </div>
+<div class="card">
+<h2>Bihar Board Exam Info</h2>
+<p>Class 10 & 12 syllabus, admit cards, model papers and exam schedules. <a href="bihar-board.html">View details</a></p>
+</div>
 
-    <div class="box">
-        <h2><a href="news.html">🗞️ News</a></h2>
-        <p>Latest education aur general news yahan milegi.</p>
-    </div>
+<div class="card">
+<h2>Study Material</h2>
+<p>Notes, previous papers, online resources for students. <a href="study.html">Check now</a></p>
+</div>
 
-    <div class="box">
-        <h2><a href="study.html">📚 Study Update</a></h2>
-        <p>Notes, syllabus aur study material.</p>
-    </div>
+<div class="card">
+<h2>Notices</h2>
+<p>Important exam and result notifications. <a href="notice.html">See notices</a></p>
+</div>
 
-    <div class="box">
-        <h2><a href="notice.html">📢 Notice</a></h2>
-        <p>Exam, result aur important notices.</p>
-    </div>
-
+<div class="card">
+<h2>Contact</h2>
+<p>Join WhatsApp group or contact us. <a href="contact.html">Click here</a></p>
+</div>
 </div>
 
 <footer>
-    <p>© 2026 Daily Update Zone | Made by Shushank</p>
+<p>© 2026 Daily Update Zone | Made by Anuj</p>
 </footer>
 
 </body>
 </html>
-
