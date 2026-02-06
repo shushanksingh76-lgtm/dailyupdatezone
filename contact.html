@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<title>Contact | Daily Update Zone</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:white;
+}
+
+/* Header */
+header{
+    text-align:center;
+    padding:50px 20px;
+    animation:fadeDown 1s ease;
+}
+@keyframes fadeDown{
+    from{opacity:0;transform:translateY(-30px);}
+    to{opacity:1;transform:translateY(0);}
+}
+header h1{
+    margin:0;
+    font-size:36px;
+}
+
+/* Box */
+.contact-box{
+    background:rgba(255,255,255,0.12);
+    margin:20px;
+    padding:25px;
+    border-radius:18px;
+    backdrop-filter:blur(6px);
+    text-align:center;
+    animation:fadeUp 1s ease;
+}
+@keyframes fadeUp{
+    from{opacity:0;transform:translateY(40px);}
+    to{opacity:1;transform:translateY(0);}
+}
+
+/* Button */
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 26px;
+    border-radius:30px;
+    background:#25D366;
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:16px;
+    transition:0.3s;
+}
+.btn:hover{
+    background:#1da851;
+    transform:scale(1.08);
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding:15px;
+    font-size:14px;
+    opacity:0.85;
+}
+
+/* Mobile */
+@media(max-width:600px){
+    header h1{font-size:28px;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>📞 Contact Us</h1>
+    <p>Daily Update Zone</p>
+</header>
+
+<div class="contact-box">
+    <h2>🤝 Connect With Us</h2>
+    <p>
+        Bihar Board, Exams, Results aur Study Updates ke liye  
+        hamare WhatsApp Channel ko join karein.
+    </p>
+
+    <a href="https://whatsapp.com/channel/0029VbCKUhh84OmGSQCzXS0K"
+       target="_blank"
+       class="btn">
+        📲 Join WhatsApp Channel
+    </a>
+</div>
+
+<footer>
+    © 2026 Daily Update Zone | Made by Shushank
+</footer>
+
+</body>
+</html>
