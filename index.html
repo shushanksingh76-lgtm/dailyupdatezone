@@ -1,178 +1,268 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Daily Update Zone | Home</title>
+<title>Shushank | Website</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- CSS starts -->
 <style>
-/* Body & Background */
-body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(120deg, #89f7fe, #66a6ff);
-    animation: backgroundShift 15s infinite alternate;
-    transition: all 0.3s ease;
+/* Popup Overlay */
+.popup-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.6);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
 }
 
-/* Background Animation */
-@keyframes backgroundShift {
-    0% { background: linear-gradient(120deg, #89f7fe, #66a6ff); }
-    50% { background: linear-gradient(120deg, #f6d365, #fda085); }
-    100% { background: linear-gradient(120deg, #84fab0, #8fd3f4); }
+/* Popup Box */
+.popup-box{
+  background:white;
+  color:#000;
+  padding:25px;
+  width:300px;
+  border-radius:16px;
+  text-align:center;
+  animation:popupShow 0.6s ease;
 }
 
-/* Header with shining animation */
-header {
-    background: linear-gradient(90deg, #ff512f, #dd2476);
-    color: white;
-    text-align: center;
-    padding: 30px 10px;
-    position: relative;
-    overflow: hidden;
-    border-bottom: 5px solid #fff;
-    animation: slideDown 1s ease-out forwards;
+@keyframes popupShow{
+  from{transform:scale(0.7);opacity:0;}
+  to{transform:scale(1);opacity:1;}
 }
 
-header::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -75%;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(120deg, rgba(255,255,255,0.2), rgba(255,255,255,0.6), rgba(255,255,255,0.2));
-    transform: skewX(-25deg);
-    animation: shine 3s infinite;
+.popup-box h2{
+  margin-top:0;
 }
 
-@keyframes shine {
-    0% { left: -75%; }
-    100% { left: 125%; }
+.popup-box select{
+  width:100%;
+  padding:10px;
+  margin:15px 0;
+  border-radius:10px;
+  border:1px solid #ccc;
 }
 
-@keyframes slideDown {
-    0% { transform: translateY(-100px); opacity: 0; }
-    100% { transform: translateY(0); opacity: 1; }
+.popup-box button{
+  padding:10px 20px;
+  border:none;
+  background:#00f2fe;
+  border-radius:20px;
+  font-weight:bold;
+  cursor:pointer;
 }
 
-/* Navigation Bar */
-nav {
-    background: #333;
-    text-align: center;
-    padding: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+.popup-box button:hover{
+  background:#1cb5e0;
 }
 
-nav a {
-    color: white;
-    margin: 15px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
-    transition: 0.3s;
+/* ===== OCEAN WATER FLOW BACKGROUND ===== */
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    color:white;
+    background: linear-gradient(
+        -45deg,
+        #0f2027,
+        #203a43,
+        #2c5364,
+        #1cb5e0
+    );
+    background-size: 400% 400%;
+    animation: waterFlow 12s ease-in-out infinite;
 }
 
-nav a:hover {
-    color: #ffdd00;
-    transform: scale(1.1);
+@keyframes waterFlow {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
-/* Content Cards */
-.content {
-    padding: 20px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 20px;
+/* ===== HEADER ===== */
+header{
+    text-align:center;
+    padding:70px 20px;
+    animation: fadeDown 1.2s ease;
 }
 
-.card {
-    background: white;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-    transform: translateY(50px);
-    opacity: 0;
-    animation: cardAppear 0.8s forwards;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+@keyframes fadeDown{
+    from{opacity:0; transform:translateY(-40px);}
+    to{opacity:1; transform:translateY(0);}
 }
 
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+header h1{
+    font-size:42px;
+    margin:0;
+    letter-spacing:2px;
 }
 
-@keyframes cardAppear {
-    to { transform: translateY(0); opacity: 1; }
+header p{
+    font-size:18px;
+    opacity:0.85;
 }
 
-/* Footer */
-footer {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    margin-top: 20px;
+/* ===== SECTION ===== */
+section{
+    background: rgba(255,255,255,0.12);
+    margin:20px;
+    padding:25px;
+    border-radius:18px;
+    backdrop-filter: blur(6px);
+    box-shadow:0 12px 30px rgba(0,0,0,0.35);
+    animation: fadeUp 1s ease;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-    nav a { margin: 10px; font-size: 14px; }
-    .card { padding: 20px; }
+@keyframes fadeUp{
+    from{opacity:0; transform:translateY(40px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+section h2{
+    margin-top:0;
+    color:#aefeff;
+}
+
+/* ===== SKILLS ===== */
+.skill{
+    margin:10px 0;
+}
+.bar{
+    height:10px;
+    background:rgba(0,0,0,0.4);
+    border-radius:20px;
+    overflow:hidden;
+}
+.fill{
+    height:100%;
+    background: linear-gradient(90deg,#00f2fe,#4facfe);
+    animation: load 2s ease;
+}
+@keyframes load{
+    from{width:0;}
+}
+
+/* ===== PROJECT ===== */
+.project{
+    background:rgba(255,255,255,0.15);
+    padding:15px;
+    border-radius:14px;
+    margin-top:10px;
+}
+
+/* ===== BUTTON ===== */
+.btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 22px;
+    border-radius:25px;
+    background:#00f2fe;
+    color:#000;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+.btn:hover{
+    background:white;
+    transform:scale(1.08);
+}
+
+/* ===== FOOTER ===== */
+footer{
+    text-align:center;
+    padding:18px;
+    font-size:14px;
+    opacity:0.85;
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:600px){
+    header h1{font-size:32px;}
+    section{margin:15px;}
 }
 </style>
-<!-- CSS ends -->
-
 </head>
+
 <body>
+<!-- State Popup -->
+<div id="statePopup" class="popup-overlay">
+  <div class="popup-box">
+    <h2>📍 आपका राज्य कौन सा है?</h2>
+    <p>Better updates देने के लिए बताइए</p>
+
+    <select id="stateSelect">
+      <option value="">-- राज्य चुनें --</option>
+      <option>Bihar</option>
+      <option>Uttar Pradesh</option>
+      <option>Jharkhand</option>
+      <option>West Bengal</option>
+      <option>Delhi</option>
+      <option>Madhya Pradesh</option>
+      <option>Rajasthan</option>
+      <option>Other</option>
+    </select>
+
+    <button onclick="saveState()">Submit</button>
+  </div>
+</div>
+
 
 <header>
-<h1>Daily Update Zone</h1>
-<p>Education & Exam Portal</p>
+    <h1>Daily update zone</h1>
+    <p>Student • Beginner Web Developer</p>
 </header>
 
-<nav>
-<a href="index.html">Home</a>
-<a href="news.html">News</a>
-<a href="bihar-board.html">Bihar Board</a>
-<a href="study.html">Study</a>
-<a href="notice.html">Notice</a>
-<a href="contact.html">Contact</a>
-</nav>
+<section>
+    <h2>🌊 About Me</h2>
+    <p>
+        Hi, I am Shushank. I am student of class 12th I learn web development and love creating
+        modern, animated and useful websites.
+    </p>
+</section>
 
-<div class="content">
-<div class="card">
-<h2>Latest News</h2>
-<p>Click <a href="news.html">here</a> to see all Bihar Board & state exam updates.</p>
-</div>
+<section>
+    <h2>📂 Projects</h2>
 
-<div class="card">
-<h2>Bihar Board Exam Info</h2>
-<p>Class 10 & 12 syllabus, admit cards, model papers and exam schedules. <a href="bihar-board.html">View details</a></p>
-</div>
+    <div class="project">
+        <strong>Daily Update Zone</strong>
+        <p>Education & Bihar exam related latest updates.</p>
+        <a href="daily-update.html" class="btn">Open Page</a>
+    </div>
 
-<div class="card">
-<h2>Study Material</h2>
-<p>Notes, previous papers, online resources for students. <a href="study.html">Check now</a></p>
-</div>
+    <div class="project">
+        <strong>Study Material Website</strong>
+        <p>Notes, syllabus and exam preparation content.</p>
+        <a href="study-material.html" class="btn">Open Page</a>
+    </div>
+</section>
 
-<div class="card">
-<h2>Notices</h2>
-<p>Important exam and result notifications. <a href="notice.html">See notices</a></p>
-</div>
 
-<div class="card">
-<h2>Contact</h2>
-<p>Join WhatsApp group or contact us. <a href="contact.html">Click here</a></p>
-</div>
-</div>
 
 <footer>
-<p>© 2026 Daily Update Zone | Made by Shushank</p>
+    © 2026 Shushank | Privacy & Policy 
 </footer>
+
+<script>
+function saveState(){
+  const state = document.getElementById("stateSelect").value;
+  if(state===""){
+    alert("कृपया अपना राज्य चुनें");
+    return;
+  }
+  localStorage.setItem("userState", state);
+  document.getElementById("statePopup").style.display="none";
+}
+
+window.onload = () => {
+  const saved = localStorage.getItem("userState");
+  if(saved){
+    document.getElementById("statePopup").style.display="none";
+  }
+};
+</script>
+</body>
 
 </body>
 </html>
-
 
