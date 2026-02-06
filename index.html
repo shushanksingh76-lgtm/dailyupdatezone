@@ -6,58 +6,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-/* Popup Overlay */
-.popup-overlay{
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,0.6);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  z-index:9999;
-}
-
-/* Popup Box */
-.popup-box{
-  background:white;
-  color:#000;
-  padding:25px;
-  width:300px;
-  border-radius:16px;
-  text-align:center;
-  animation:popupShow 0.6s ease;
-}
-
-@keyframes popupShow{
-  from{transform:scale(0.7);opacity:0;}
-  to{transform:scale(1);opacity:1;}
-}
-
-.popup-box h2{
-  margin-top:0;
-}
-
-.popup-box select{
-  width:100%;
-  padding:10px;
-  margin:15px 0;
-  border-radius:10px;
-  border:1px solid #ccc;
-}
-
-.popup-box button{
-  padding:10px 20px;
-  border:none;
-  background:#00f2fe;
-  border-radius:20px;
-  font-weight:bold;
-  cursor:pointer;
-}
-
-.popup-box button:hover{
-  background:#1cb5e0;
-}
-
 /* ===== OCEAN WATER FLOW BACKGROUND ===== */
 body{
     margin:0;
@@ -185,27 +133,6 @@ footer{
 </head>
 
 <body>
-<!-- State Popup -->
-<div id="statePopup" class="popup-overlay">
-  <div class="popup-box">
-    <h2>📍 आपका राज्य कौन सा है?</h2>
-    <p>Better updates देने के लिए बताइए</p>
-
-    <select id="stateSelect">
-      <option value="">-- राज्य चुनें --</option>
-      <option>Bihar</option>
-      <option>Uttar Pradesh</option>
-      <option>Jharkhand</option>
-      <option>West Bengal</option>
-      <option>Delhi</option>
-      <option>Madhya Pradesh</option>
-      <option>Rajasthan</option>
-      <option>Other</option>
-    </select>
-
-    <button onclick="saveState()">Submit</button>
-  </div>
-</div>
 
 
 <header>
@@ -239,29 +166,16 @@ footer{
 
 
 
+<section>
+    <h2>📞 Contact</h2>
+    <p>Let’s connect with me 👇</p>
+    <a href="contact.html" class="btn">Join WhatsApp</a>
+
+</section>
+
 <footer>
     © 2026 Shushank | Privacy & Policy 
 </footer>
-
-<script>
-function saveState(){
-  const state = document.getElementById("stateSelect").value;
-  if(state===""){
-    alert("कृपया अपना राज्य चुनें");
-    return;
-  }
-  localStorage.setItem("userState", state);
-  document.getElementById("statePopup").style.display="none";
-}
-
-window.onload = () => {
-  const saved = localStorage.getItem("userState");
-  if(saved){
-    document.getElementById("statePopup").style.display="none";
-  }
-};
-</script>
-</body>
 
 </body>
 </html>
