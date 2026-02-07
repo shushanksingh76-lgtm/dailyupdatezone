@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>About Us | Daily Update Zone</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* ===== BACKGROUND ===== */
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    color:white;
+    background: linear-gradient(
+        -45deg,
+        #0f2027,
+        #203a43,
+        #2c5364,
+        #1cb5e0
+    );
+    background-size:400% 400%;
+    animation: waterFlow 12s ease-in-out infinite;
+}
+
+@keyframes waterFlow{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* ===== HEADER ===== */
+header{
+    text-align:center;
+    padding:70px 20px;
+    animation: fadeDown 1.2s ease;
+}
+
+@keyframes fadeDown{
+    from{opacity:0; transform:translateY(-40px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+header h1{
+    font-size:42px;
+    margin:0;
+    letter-spacing:2px;
+}
+
+header p{
+    font-size:18px;
+    opacity:0.85;
+}
+
+/* ===== SECTION ===== */
+section{
+    background: rgba(255,255,255,0.12);
+    margin:20px;
+    padding:28px;
+    border-radius:18px;
+    backdrop-filter: blur(6px);
+    box-shadow:0 12px 30px rgba(0,0,0,0.35);
+    animation: fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+    from{opacity:0; transform:translateY(40px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+section h2{
+    margin-top:0;
+    color:#aefeff;
+}
+
+section p, li{
+    font-size:16px;
+    line-height:1.7;
+}
+
+/* ===== LIST ===== */
+ul{
+    padding-left:20px;
+}
+li{
+    margin:8px 0;
+}
+
+/* ===== BUTTON ===== */
+.btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 24px;
+    border-radius:25px;
+    background:#00f2fe;
+    color:#000;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+.btn:hover{
+    background:white;
+    transform:scale(1.08);
+}
+
+/* ===== FOOTER ===== */
+footer{
+    text-align:center;
+    padding:18px;
+    font-size:14px;
+    opacity:0.85;
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:600px){
+    header h1{font-size:32px;}
+    section{margin:15px;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>About Daily Update Zone</h1>
+    <p>Learn • Grow • Stay Updated</p>
+</header>
+
+<section>
+    <h2>🌊 Who We Are</h2>
+    <p>
+        <strong>Daily Update Zone</strong> ek educational aur information website hai
+        jo students ke liye specially banayi gayi hai. Yahan par education,
+        Bihar Board, exams, results aur study material se related latest updates
+        simple aur clear language me share ki jaati hain.
+    </p>
+</section>
+
+<section>
+    <h2>📚 What We Provide</h2>
+    <ul>
+        <li>Education & exam related daily updates</li>
+        <li>Bihar Board & competitive exam news</li>
+        <li>Study material and learning resources</li>
+        <li>Student-friendly and easy explanations</li>
+    </ul>
+</section>
+
+<section>
+    <h2>🎯 Our Mission</h2>
+    <p>
+        Hamara mission hai students ko ek trusted platform dena jahan
+        unhe sahi, original aur updated information mile.
+        Hum kisi bhi tarah ka fake ya misleading content publish nahi karte.
+    </p>
+
+    <a href="index.html" class="btn">← Back to Home</a>
+</section>
+
+<footer>
+    © 2026 Daily Update Zone |
+    <a href="privacy-policy.html" style="color:#aefeff;">Privacy Policy</a> |
+    <a href="contact.html" style="color:#aefeff;">Contact Us</a>
+</footer>
+
+</body>
+</html>
