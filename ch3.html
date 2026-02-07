@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<title>Chapter 3 – Matrices</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    color:white;
+    background: linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#1cb5e0);
+    background-size:400% 400%;
+    animation:bg 12s infinite;
+}
+@keyframes bg{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+header{
+    text-align:center;
+    padding:40px 20px;
+}
+section{
+    background:rgba(255,255,255,0.12);
+    margin:20px;
+    padding:20px;
+    border-radius:16px;
+}
+h2{
+    color:#aefeff;
+}
+.question{
+    background:rgba(255,255,255,0.15);
+    padding:12px;
+    margin:10px 0;
+    border-radius:12px;
+}
+.answer{
+    color:#00f2fe;
+    font-weight:bold;
+}
+a{
+    color:#aefeff;
+    text-decoration:none;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>📘 Chapter 3 – Matrices</h1>
+    <p>Class 12 Maths | Bihar Board</p>
+</header>
+
+<section>
+<h2>📌 मुख्य सूत्र (Formulas)</h2>
+
+<p>1. A = [aᵢⱼ]ₘₓₙ ⇒ A एक m × n मैट्रिक्स है</p>
+<p>2. समान क्रम (order) के मैट्रिक्स ही जोड़े/घटाए जा सकते हैं</p>
+<p>3. A + B = [aᵢⱼ + bᵢⱼ]</p>
+<p>4. A − B = [aᵢⱼ − bᵢⱼ]</p>
+<p>5. kA = [k·aᵢⱼ] (Scalar multiplication)</p>
+<p>6. AB परिभाषित है ⇔ A के स्तम्भ = B की पंक्तियाँ</p>
+<p>7. AB ≠ BA (सामान्यतः)</p>
+<p>8. (AB)C = A(BC)</p>
+<p>9. A(I) = (I)A = A</p>
+<p>10. A(O) = O</p>
+<p>11. A² = A × A</p>
+<p>12. (A + B)ᵀ = Aᵀ + Bᵀ</p>
+<p>13. (kA)ᵀ = kAᵀ</p>
+<p>14. (AB)ᵀ = BᵀAᵀ</p>
+<p>15. शून्य मैट्रिक्स को O से दर्शाते हैं</p>
+<p>16. इकाई मैट्रिक्स को I से दर्शाते हैं</p>
+
+
+</section>
+
+<section>
+<h2>📝 20 Objective Questions</h2>
+
+<div class="question">1. Matrix का क्रम (order) क्या होता है?<br>
+A. पंक्ति × स्तम्भ <br>
+B. स्तम्भ × पंक्ति <br>
+C. पंक्ति + स्तम्भ <br>
+D. पंक्ति − स्तम्भ<br>
+<span class="answer">उत्तर: A</span></div>
+
+<div class="question">2. 2×3 matrix में कितने तत्व होंगे?<br>
+A. 5 <br>B. 6 <br>C. 2 <br>D. 3<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">3. शून्य मैट्रिक्स को क्या कहते हैं?<br>
+A. Identity matrix <br>B. Null matrix <br>C. Square matrix <br>D. Row matrix<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">4. Identity matrix को किससे दर्शाते हैं?<br>
+A. O <br>B. A <br>C. I <br>D. M<br>
+<span class="answer">उत्तर: C</span></div>
+
+<div class="question">5. AB परिभाषित है जब?<br>
+A. A और B समान हों <br>
+B. A के स्तम्भ = B की पंक्ति <br>
+C. A square हो <br>
+D. B square हो<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">6. A + B संभव है जब?<br>
+A. order अलग हो <br>
+B. same order हो <br>
+C. A square हो <br>
+D. B square हो<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">7. A + B = B + A किस गुण को दर्शाता है?<br>
+A. Associative <br>B. Distributive <br>C. Commutative <br>D. Identity<br>
+<span class="answer">उत्तर: C</span></div>
+
+<div class="question">8. (A + B) + C = A + (B + C) है?<br>
+A. Commutative <br>B. Associative <br>C. Identity <br>D. Zero<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">9. A + O = A में O क्या है?<br>
+A. Identity <br>B. Zero matrix <br>C. Scalar <br>D. Unit matrix<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">10. A − A = ?<br>
+A. A <br>B. I <br>C. O <br>D. −A<br>
+<span class="answer">उत्तर: C</span></div>
+
+<div class="question">11. 1×n matrix को क्या कहते हैं?<br>
+A. Column matrix <br>B. Square matrix <br>C. Row matrix <br>D. Identity matrix<br>
+<span class="answer">उत्तर: C</span></div>
+
+<div class="question">12. n×1 matrix कहलाता है?<br>
+A. Row matrix <br>B. Column matrix <br>C. Square matrix <br>D. Zero matrix<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">13. Square matrix का order होता है?<br>
+A. m×n <br>B. n×m <br>C. n×n <br>D. m+n<br>
+<span class="answer">उत्तर: C</span></div>
+
+<div class="question">14. A(I) = ?<br>
+A. I <br>B. O <br>C. A <br>D. −A<br>
+<span class="answer">उत्तर: C</span></div>
+
+<div class="question">15. A(O) = ?<br>
+A. A <br>B. I <br>C. O <br>D. −A<br>
+<span class="answer">उत्तर: C</span></div>
+
+<div class="question">16. AB = BA हमेशा होता है?<br>
+A. हाँ <br>B. नहीं <br>C. कभी-कभी <br>D. कभी नहीं<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">17. 3×3 matrix में कितने तत्व होते हैं?<br>
+A. 6 <br>B. 9 <br>C. 3 <br>D. 12<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">18. A² का अर्थ है?<br>
+A. 2A <br>B. A+A <br>C. A×A <br>D. A−A<br>
+<span class="answer">उत्तर: C</span></div>
+
+<div class="question">19. Scalar multiplication का रूप है?<br>
+A. A+B <br>B. kA <br>C. AB <br>D. A²<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">20. Matrix का प्रयोग किसमें होता है?<br>
+A. Algebra <br>B. Geometry <br>C. Physics <br>D. सभी में<br>
+<span class="answer">उत्तर: D</span></div>
+
+<br>
+<a href="class12-maths.html" class="btn">⬅ Back</a>
+
+</section>
+
+</body>
+</html>

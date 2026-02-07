@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<title>Chapter 4 – Determinants</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    color:white;
+    background: linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#1cb5e0);
+    background-size:400% 400%;
+    animation:bg 12s infinite;
+}
+@keyframes bg{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+header{
+    text-align:center;
+    padding:40px 20px;
+}
+section{
+    background:rgba(255,255,255,0.12);
+    margin:20px;
+    padding:20px;
+    border-radius:16px;
+}
+h2{
+    color:#aefeff;
+}
+.question{
+    background:rgba(255,255,255,0.15);
+    padding:12px;
+    margin:10px 0;
+    border-radius:12px;
+}
+.answer{
+    color:#00f2fe;
+    font-weight:bold;
+}
+a{
+    color:#aefeff;
+    text-decoration:none;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>📘 Chapter 4 – Determinants</h1>
+    <p>Class 12 Maths | Bihar Board</p>
+</header>
+
+<section>
+<h2>📌 मुख्य सूत्र (Important Formulas)</h2>
+
+<p>1. |A| = a₁₁(a₂₂a₃₃ − a₂₃a₃₂) − a₁₂(a₂₁a₃₃ − a₂₃a₃₁) + a₁₃(a₂₁a₃₂ − a₂₂a₃₁)</p>
+<p>2. |Aᵀ| = |A|</p>
+<p>3. |I| = 1</p>
+<p>4. |O| = 0</p>
+<p>5. यदि दो पंक्तियाँ समान हों ⇒ |A| = 0</p>
+<p>6. यदि दो स्तम्भ समान हों ⇒ |A| = 0</p>
+<p>7. किसी पंक्ति/स्तम्भ को k से गुणा ⇒ determinant भी k से गुणा</p>
+<p>8. यदि किसी पंक्ति को जोड़/घटा दें ⇒ determinant नहीं बदलता</p>
+<p>9. |AB| = |A||B|</p>
+<p>10. |kA| = kⁿ|A| (जहाँ A n×n है)</p>
+
+<p>11. A singular ⇔ |A| = 0</p>
+<p>12. A non-singular ⇔ |A| ≠ 0</p>
+<p>13. A⁻¹ अस्तित्व में होगा ⇔ |A| ≠ 0</p>
+<p>14. Adj(A) = cofactor matrix का transpose</p>
+<p>15. A⁻¹ = Adj(A) / |A|</p>
+<p>16. A·Adj(A) = |A|I</p>
+<p>17. Adj(I) = I</p>
+<p>18. Adj(Aᵀ) = (Adj A)ᵀ</p>
+<p>19. Adj(AB) = Adj(B)Adj(A)</p>
+<p>20. |Adj(A)| = |A|ⁿ⁻¹</p>
+
+<p>21. Cofactor Cᵢⱼ = (−1)ᶦ⁺ʲ Mᵢⱼ</p>
+<p>22. Minor Mᵢⱼ = संबंधित उप-determinant</p>
+<p>23. Row interchange करने पर determinant का चिन्ह बदलता है</p>
+<p>24. यदि किसी पंक्ति के सभी तत्व 0 हों ⇒ |A| = 0</p>
+<p>25. समानुपाती (proportional) पंक्तियाँ ⇒ |A| = 0</p>
+<p>26. |A| = |Aᵀ|</p>
+<p>27. |A⁻¹| = 1/|A|</p>
+<p>28. |A²| = |A|²</p>
+<p>29. |−A| = (−1)ⁿ|A|</p>
+<p>30. Linear equations solvable ⇔ |A| ≠ 0</p>
+</section>
+
+<section>
+<h2>📝 20 Objective Questions</h2>
+
+<div class="question">1. Determinant किस मैट्रिक्स के लिए परिभाषित होता है?<br>
+A. Row matrix <br>B. Column matrix <br>C. Square matrix <br>D. Zero matrix<br>
+<span class="answer">उत्तर: C</span></div>
+
+<div class="question">2. 2×2 determinant का मान होता है?<br>
+A. ad − bc <br>B. ab − cd <br>C. ac − bd <br>D. a + d<br>
+<span class="answer">उत्तर: A</span></div>
+
+<div class="question">3. यदि दो पंक्तियाँ समान हों तो determinant होगा?<br>
+A. 1 <br>B. −1 <br>C. 0 <br>D. अनंत<br>
+<span class="answer">उत्तर: C</span></div>
+
+<div class="question">4. |Aᵀ| का मान क्या है?<br>
+A. −|A| <br>B. |A| <br>C. 0 <br>D. 1<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">5. |I| का मान होता है?<br>
+A. 0 <br>B. −1 <br>C. 1 <br>D. 2<br>
+<span class="answer">उत्तर: C</span></div>
+
+<div class="question">6. यदि |A| = 0 हो, तो A कहलाता है?<br>
+A. Singular <br>B. Non-singular <br>C. Identity <br>D. Zero<br>
+<span class="answer">उत्तर: A</span></div>
+
+<div class="question">7. A⁻¹ अस्तित्व में होगा जब?<br>
+A. |A| = 0 <br>B. |A| ≠ 0 <br>C. A square न हो <br>D. A zero हो<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">8. Adj(A) क्या है?<br>
+A. Determinant <br>B. Inverse <br>C. Cofactor matrix का transpose <br>D. Identity<br>
+<span class="answer">उत्तर: C</span></div>
+
+<div class="question">9. |AB| = ?<br>
+A. |A| + |B| <br>B. |A| − |B| <br>C. |A||B| <br>D. |A|/|B|<br>
+<span class="answer">उत्तर: C</span></div>
+
+<div class="question">10. यदि किसी पंक्ति को k से गुणा करें तो determinant?<br>
+A. नहीं बदलता <br>B. k से गुणा <br>C. k² से गुणा <br>D. 0 हो जाता है<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">11. Non-singular matrix के लिए |A| होगा?<br>
+A. 0 <br>B. 1 <br>C. ≠ 0 <br>D. −1<br>
+<span class="answer">उत्तर: C</span></div>
+
+<div class="question">12. Cofactor किससे जुड़ा है?<br>
+A. Row <br>B. Column <br>C. Determinant <br>D. सभी से<br>
+<span class="answer">उत्तर: D</span></div>
+
+<div class="question">13. 3×3 determinant में कुल पद होते हैं?<br>
+A. 3 <br>B. 4 <br>C. 6 <br>D. 9<br>
+<span class="answer">उत्तर: C</span></div>
+
+<div class="question">14. यदि |A| = 5, तो |2A| = ?<br>
+A. 10 <br>B. 20 <br>C. 40 <br>D. 8<br>
+<span class="answer">उत्तर: C</span></div>
+
+<div class="question">15. A·Adj(A) = ?<br>
+A. I <br>B. |A|I <br>C. A <br>D. O<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">16. Inverse matrix का प्रयोग होता है?<br>
+A. समीकरण हल करने में <br>B. क्षेत्रफल निकालने में <br>C. जोड़ में <br>D. घटाव में<br>
+<span class="answer">उत्तर: A</span></div>
+
+<div class="question">17. यदि |A| = −3, तो |Aᵀ| = ?<br>
+A. 3 <br>B. −3 <br>C. 0 <br>D. 1<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">18. Singular matrix का inverse होता है?<br>
+A. संभव <br>B. असंभव <br>C. हमेशा <br>D. कभी-कभी<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">19. Determinant का उपयोग होता है?<br>
+A. Linear equations <br>B. Geometry <br>C. Physics <br>D. सभी में<br>
+<span class="answer">उत्तर: D</span></div>
+
+<div class="question">20. |A| = 1 हो तो A कहलाता है?<br>
+A. Singular <br>B. Non-singular <br>C. Zero <br>D. Identity<br>
+<span class="answer">उत्तर: B</span></div>
+
+<br>
+<a href="class12-maths.html" class="btn">⬅ Back</a>
+
+</section>
+
+</body>
+</html>
