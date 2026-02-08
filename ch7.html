@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<title>Chapter 7 – Integrals</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    color:white;
+    background: linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#1cb5e0);
+    background-size:400% 400%;
+    animation:bg 12s infinite;
+}
+@keyframes bg{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+header{
+    text-align:center;
+    padding:40px 20px;
+}
+section{
+    background:rgba(255,255,255,0.12);
+    margin:20px;
+    padding:20px;
+    border-radius:16px;
+}
+h2{color:#aefeff;}
+.question{
+    background:rgba(255,255,255,0.15);
+    padding:12px;
+    margin:10px 0;
+    border-radius:12px;
+}
+.answer{
+    color:#00f2fe;
+    font-weight:bold;
+}
+a{
+    color:#aefeff;
+    text-decoration:none;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>📘 Chapter 7 – Integrals</h1>
+<p>Class 12 Maths | Bihar Board</p>
+</header>
+
+<section>
+<h2>📌 30 महत्वपूर्ण सूत्र (Important Formulas)</h2>
+
+<p>1. ∫xⁿ dx = xⁿ⁺¹/(n+1) + C , n ≠ −1</p>
+<p>2. ∫1/x dx = ln|x| + C</p>
+<p>3. ∫eˣ dx = eˣ + C</p>
+<p>4. ∫aˣ dx = aˣ/ln a + C</p>
+<p>5. ∫sin x dx = −cos x + C</p>
+<p>6. ∫cos x dx = sin x + C</p>
+<p>7. ∫sec²x dx = tan x + C</p>
+<p>8. ∫cosec²x dx = −cot x + C</p>
+<p>9. ∫sec x tan x dx = sec x + C</p>
+<p>10. ∫cosec x cot x dx = −cosec x + C</p>
+
+<p>11. ∫dx/(1+x²) = tan⁻¹x + C</p>
+<p>12. ∫dx/√(1−x²) = sin⁻¹x + C</p>
+<p>13. ∫dx/(a²+x²) = (1/a)tan⁻¹(x/a) + C</p>
+<p>14. ∫dx/√(a²−x²) = sin⁻¹(x/a) + C</p>
+<p>15. ∫dx/(x²−a²) = (1/2a)ln|(x−a)/(x+a)| + C</p>
+<p>16. ∫(f(x)+g(x))dx = ∫f(x)dx + ∫g(x)dx</p>
+<p>17. ∫k f(x)dx = k∫f(x)dx</p>
+<p>18. ∫0 dx = C</p>
+<p>19. Integration is inverse of differentiation</p>
+<p>20. Constant of integration = C</p>
+
+<p>21. ∫cos(ax)dx = (1/a)sin(ax)+C</p>
+<p>22. ∫sin(ax)dx = −(1/a)cos(ax)+C</p>
+<p>23. ∫sec²(ax)dx = (1/a)tan(ax)+C</p>
+<p>24. ∫e^(ax)dx = (1/a)e^(ax)+C</p>
+<p>25. ∫dx/x = ln|x|+C</p>
+<p>26. Substitution method used in integration</p>
+<p>27. ∫f′(x)/f(x) dx = ln|f(x)| + C</p>
+<p>28. ∫dx/(x√(x²−1)) = sec⁻¹x + C</p>
+<p>29. Indefinite integral has no limits</p>
+<p>30. Integration used to find area & volume</p>
+
+</section>
+
+<section>
+<h2>📝 20 Objective Questions</h2>
+
+<div class="question">1. ∫x² dx = ?<br>
+A. x³ <br>B. x³/3 + C <br>C. 2x <br>D. x² + C<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">2. ∫1/x dx = ?<br>
+A. x <br>B. ln|x| + C <br>C. 1/x <br>D. x²<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">3. ∫eˣ dx = ?<br>
+A. xeˣ <br>B. eˣ + C <br>C. ln x <br>D. 1<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">4. ∫sin x dx = ?<br>
+A. cos x <br>B. −cos x + C <br>C. sin x <br>D. tan x<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">5. ∫cos x dx = ?<br>
+A. sin x + C <br>B. −sin x <br>C. cos x <br>D. tan x<br>
+<span class="answer">उत्तर: A</span></div>
+
+<div class="question">6. ∫sec²x dx = ?<br>
+A. sec x <br>B. tan x + C <br>C. cosec x <br>D. cot x<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">7. ∫cosec²x dx = ?<br>
+A. tan x <br>B. cot x <br>C. −cot x + C <br>D. cosec x<br>
+<span class="answer">उत्तर: C</span></div>
+
+<div class="question">8. ∫dx/(1+x²) = ?<br>
+A. sin⁻¹x <br>B. cos⁻¹x <br>C. tan⁻¹x + C <br>D. ln x<br>
+<span class="answer">उत्तर: C</span></div>
+
+<div class="question">9. ∫dx/√(1−x²) = ?<br>
+A. tan⁻¹x <br>B. sin⁻¹x + C <br>C. cos⁻¹x <br>D. ln x<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">10. Integration क्या है?<br>
+A. Differentiation का inverse <br>B. Limit <br>C. Function <br>D. Matrix<br>
+<span class="answer">उत्तर: A</span></div>
+
+<div class="question">11. ∫0 dx = ?<br>
+A. 0 <br>B. 1 <br>C. C <br>D. x<br>
+<span class="answer">उत्तर: C</span></div>
+
+<div class="question">12. ∫kf(x)dx = ?<br>
+A. k + ∫f(x)dx <br>B. ∫f(x)dx <br>C. k∫f(x)dx <br>D. 0<br>
+<span class="answer">उत्तर: C</span></div>
+
+<div class="question">13. Constant of integration क्या होता है?<br>
+A. x <br>B. C <br>C. y <br>D. 0<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">14. Indefinite integral में होता है?<br>
+A. limits <br>B. no limits <br>C. 0 <br>D. 1<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">15. ∫aˣ dx = ?<br>
+A. aˣ <br>B. aˣ ln a <br>C. aˣ/ln a + C <br>D. ln x<br>
+<span class="answer">उत्तर: C</span></div>
+
+<div class="question">16. ∫cos(ax)dx = ?<br>
+A. sin(ax) <br>B. (1/a)sin(ax)+C <br>C. cos x <br>D. tan x<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">17. ∫sin(ax)dx = ?<br>
+A. cos(ax) <br>B. −(1/a)cos(ax)+C <br>C. tan x <br>D. sec x<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">18. Integration का प्रयोग होता है?<br>
+A. Area निकालने में <br>B. Volume में <br>C. Physics में <br>D. सभी में<br>
+<span class="answer">उत्तर: D</span></div>
+
+<div class="question">19. ∫dx/x√(x²−1) = ?<br>
+A. tan⁻¹x <br>B. sec⁻¹x + C <br>C. sin⁻¹x <br>D. ln x<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">20. Integration chapter किससे जुड़ा है?<br>
+A. Algebra <br>B. Calculus <br>C. Geometry <br>D. Probability<br>
+<span class="answer">उत्तर: B</span></div>
+
+<br>
+<a href="class12-maths.html">⬅ Back</a>
+
+</section>
+
+</body>
+</html>

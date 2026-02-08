@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<title>Chapter 10 – Vector Algebra</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    color:white;
+    background: linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#1cb5e0);
+    background-size:400% 400%;
+    animation:bg 12s infinite;
+}
+@keyframes bg{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+header{
+    text-align:center;
+    padding:40px 20px;
+}
+section{
+    background:rgba(255,255,255,0.12);
+    margin:20px;
+    padding:20px;
+    border-radius:16px;
+}
+h2{color:#aefeff;}
+.question{
+    background:rgba(255,255,255,0.15);
+    padding:12px;
+    margin:10px 0;
+    border-radius:12px;
+}
+.answer{
+    color:#00f2fe;
+    font-weight:bold;
+}
+a{
+    color:#aefeff;
+    text-decoration:none;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>📘 Chapter 10 – Vector Algebra</h1>
+<p>Class 12 Maths | Bihar Board</p>
+</header>
+
+<section>
+<h2>📌 30 महत्वपूर्ण सूत्र (Important Formulas)</h2>
+
+<p>1. Vector के पास magnitude और direction दोनों होते हैं</p>
+<p>2. Scalar के पास केवल magnitude होता है</p>
+<p>3. Zero vector = 0⃗</p>
+<p>4. Unit vector का magnitude = 1</p>
+<p>5. î, ĵ, k̂ unit vectors हैं</p>
+<p>6. Vector a⃗ = xî + yĵ + zk̂</p>
+<p>7. |a⃗| = √(x² + y² + z²)</p>
+<p>8. Position vector origin से लिया जाता है</p>
+<p>9. Equal vectors का magnitude और direction समान होता है</p>
+<p>10. Negative vector की दिशा विपरीत होती है</p>
+
+<p>11. a⃗ + b⃗ = resultant vector</p>
+<p>12. a⃗ − b⃗ = a⃗ + (−b⃗)</p>
+<p>13. Triangle law vector addition का नियम है</p>
+<p>14. Parallelogram law vector addition का नियम है</p>
+<p>15. Scalar multiplication में magnitude बदलता है</p>
+<p>16. a⃗ · b⃗ = |a||b|cosθ</p>
+<p>17. a⃗ · b⃗ = 0 ⇒ vectors perpendicular</p>
+<p>18. a⃗ × b⃗ = |a||b|sinθ n̂</p>
+<p>19. a⃗ × b⃗ की दिशा right hand rule से</p>
+<p>20. a⃗ × b⃗ = 0 ⇒ vectors parallel</p>
+
+<p>21. Scalar product एक scalar देता है</p>
+<p>22. Vector product एक vector देता है</p>
+<p>23. Dot product commutative होता है</p>
+<p>24. Cross product anti-commutative होता है</p>
+<p>25. î × ĵ = k̂</p>
+<p>26. ĵ × k̂ = î</p>
+<p>27. k̂ × î = ĵ</p>
+<p>28. î × î = 0</p>
+<p>29. Projection formula: a⃗·b⃗ / |b⃗|</p>
+<p>30. Vector algebra physics में उपयोगी है</p>
+
+</section>
+
+<section>
+<h2>📝 20 Objective Questions</h2>
+
+<div class="question">1. Vector के पास क्या होता है?<br>
+A. केवल magnitude <br>B. केवल direction <br>C. magnitude और direction <br>D. कोई नहीं<br>
+<span class="answer">उत्तर: C</span></div>
+
+<div class="question">2. Scalar के पास क्या होता है?<br>
+A. direction <br>B. magnitude <br>C. दोनों <br>D. कोई नहीं<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">3. Unit vector का magnitude?<br>
+A. 0 <br>B. 1 <br>C. 2 <br>D. ∞<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">4. î, ĵ, k̂ क्या हैं?<br>
+A. scalars <br>B. unit vectors <br>C. zero vectors <br>D. random vectors<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">5. Zero vector का magnitude?<br>
+A. 0 <br>B. 1 <br>C. ∞ <br>D. −1<br>
+<span class="answer">उत्तर: A</span></div>
+
+<div class="question">6. |a⃗| किसे दर्शाता है?<br>
+A. direction <br>B. magnitude <br>C. angle <br>D. product<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">7. Dot product क्या देता है?<br>
+A. vector <br>B. scalar <br>C. line <br>D. plane<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">8. Cross product क्या देता है?<br>
+A. scalar <br>B. number <br>C. vector <br>D. angle<br>
+<span class="answer">उत्तर: C</span></div>
+
+<div class="question">9. a⃗·b⃗ = 0 ⇒ vectors?<br>
+A. parallel <br>B. perpendicular <br>C. equal <br>D. zero<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">10. a⃗×b⃗ = 0 ⇒ vectors?<br>
+A. perpendicular <br>B. parallel <br>C. equal <br>D. unit<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">11. Dot product formula?<br>
+A. |a||b|sinθ <br>B. |a||b|cosθ <br>C. a+b <br>D. a−b<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">12. Cross product formula?<br>
+A. |a||b|cosθ <br>B. |a||b|sinθ <br>C. a·b <br>D. a+b<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">13. î × ĵ = ?<br>
+A. î <br>B. ĵ <br>C. k̂ <br>D. 0<br>
+<span class="answer">उत्तर: C</span></div>
+
+<div class="question">14. ĵ × k̂ = ?<br>
+A. î <br>B. ĵ <br>C. k̂ <br>D. 0<br>
+<span class="answer">उत्तर: A</span></div>
+
+<div class="question">15. Vector addition का नियम?<br>
+A. triangle law <br>B. Newton law <br>C. Hooke law <br>D. Ohm law<br>
+<span class="answer">उत्तर: A</span></div>
+
+<div class="question">16. Cross product किसका rule मानता है?<br>
+A. left hand <br>B. right hand <br>C. screw rule <br>D. none<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">17. Vector algebra का उपयोग?<br>
+A. physics <br>B. engineering <br>C. mechanics <br>D. सभी में<br>
+<span class="answer">उत्तर: D</span></div>
+
+<div class="question">18. Negative vector में क्या बदलता है?<br>
+A. magnitude <br>B. direction <br>C. value <br>D. length<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">19. a⃗ + b⃗ क्या देता है?<br>
+A. scalar <br>B. resultant vector <br>C. zero <br>D. constant<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">20. Vector chapter किस unit से जुड़ा है?<br>
+A. Algebra <br>B. Calculus <br>C. Geometry <br>D. Physics<br>
+<span class="answer">उत्तर: C</span></div>
+
+<br>
+<a href="class12-maths.html">⬅ Back</a>
+
+</section>
+
+</body>
+</html>

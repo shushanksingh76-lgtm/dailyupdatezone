@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<title>Chapter 11 – Three Dimensional Geometry</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    color:white;
+    background:linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#1cb5e0);
+    background-size:400% 400%;
+    animation:bg 12s infinite;
+}
+@keyframes bg{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+header{
+    text-align:center;
+    padding:40px 20px;
+}
+section{
+    background:rgba(255,255,255,0.12);
+    margin:20px;
+    padding:20px;
+    border-radius:16px;
+}
+h2{color:#aefeff;}
+.question{
+    background:rgba(255,255,255,0.15);
+    padding:12px;
+    margin:10px 0;
+    border-radius:12px;
+}
+.answer{
+    color:#00f2fe;
+    font-weight:bold;
+}
+a{
+    color:#aefeff;
+    text-decoration:none;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>📘 Chapter 11 – Three Dimensional Geometry</h1>
+<p>Class 12 Maths | Bihar Board</p>
+</header>
+
+<section>
+<h2>📌 30 महत्वपूर्ण सूत्र (Important Formulas)</h2>
+
+<p>1. बिंदु का निर्देशांक (x, y, z) होता है</p>
+<p>2. Origin का निर्देशांक (0, 0, 0)</p>
+<p>3. दो बिंदुओं के बीच दूरी = √[(x₂−x₁)²+(y₂−y₁)²+(z₂−z₁)²]</p>
+<p>4. Section formula का उपयोग दूरी बाँटने में</p>
+<p>5. Mid-point formula = ((x₁+x₂)/2, (y₁+y₂)/2, (z₁+z₂)/2)</p>
+<p>6. Direction ratios (DR) रेखा की दिशा बताते हैं</p>
+<p>7. Direction cosines (DC) = l, m, n</p>
+<p>8. l² + m² + n² = 1</p>
+<p>9. दो रेखाओं के बीच कोण का सूत्र</p>
+<p>10. समान्तर रेखाओं के DR समानुपाती होते हैं</p>
+
+<p>11. लम्बवत रेखाओं के लिए a₁a₂ + b₁b₂ + c₁c₂ = 0</p>
+<p>12. रेखा का vector form: r = a + λb</p>
+<p>13. Cartesian form of line</p>
+<p>14. Plane का general equation: ax + by + cz + d = 0</p>
+<p>15. Plane का normal vector = (a, b, c)</p>
+<p>16. दो planes समान्तर यदि a₁/a₂ = b₁/b₂ = c₁/c₂</p>
+<p>17. दो planes लम्बवत यदि a₁a₂ + b₁b₂ + c₁c₂ = 0</p>
+<p>18. बिंदु से plane की दूरी का सूत्र</p>
+<p>19. Direction ratios plane को काटते हैं</p>
+<p>20. Line और plane के बीच angle का सूत्र</p>
+
+<p>21. Skew lines कभी नहीं मिलती</p>
+<p>22. Coplanar lines एक ही plane में होती हैं</p>
+<p>23. Collinear points एक ही line में</p>
+<p>24. 3D geometry में x, y, z तीन अक्ष</p>
+<p>25. Distance हमेशा positive होती है</p>
+<p>26. Vector method अधिक आसान माना जाता है</p>
+<p>27. Plane का intercept form</p>
+<p>28. Symmetric form of line</p>
+<p>29. Direction cosines angle से जुड़े होते हैं</p>
+<p>30. 3D geometry space geometry कहलाती है</p>
+
+</section>
+
+<section>
+<h2>📝 20 Objective Questions</h2>
+
+<div class="question">1. Origin का निर्देशांक क्या है?<br>
+A. (1,0,0) <br>B. (0,1,0) <br>C. (0,0,0) <br>D. (1,1,1)<br>
+<span class="answer">उत्तर: C</span></div>
+
+<div class="question">2. 3D geometry में कितने अक्ष होते हैं?<br>
+A. 1 <br>B. 2 <br>C. 3 <br>D. 4<br>
+<span class="answer">उत्तर: C</span></div>
+
+<div class="question">3. Distance formula किसके लिए है?<br>
+A. area <br>B. volume <br>C. दूरी <br>D. कोण<br>
+<span class="answer">उत्तर: C</span></div>
+
+<div class="question">4. Mid-point formula किसके लिए?<br>
+A. दूरी <br>B. मध्य बिंदु <br>C. ढाल <br>D. क्षेत्रफल<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">5. Direction cosines को क्या कहते हैं?<br>
+A. a,b,c <br>B. x,y,z <br>C. l,m,n <br>D. p,q,r<br>
+<span class="answer">उत्तर: C</span></div>
+
+<div class="question">6. l²+m²+n² का मान?<br>
+A. 0 <br>B. 1 <br>C. 2 <br>D. 3<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">7. Plane का general equation?<br>
+A. y=mx+c <br>B. ax+by+cz+d=0 <br>C. x²+y²=r² <br>D. none<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">8. Plane का normal vector?<br>
+A. (x,y,z) <br>B. (a,b,c) <br>C. (l,m,n) <br>D. (1,1,1)<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">9. दो planes लम्बवत कब?<br>
+A. ratios equal <br>B. dot product zero <br>C. parallel <br>D. none<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">10. Line का vector form?<br>
+A. r=a+λb <br>B. y=mx+c <br>C. ax+by=0 <br>D. none<br>
+<span class="answer">उत्तर: A</span></div>
+
+<div class="question">11. Skew lines क्या होती हैं?<br>
+A. मिलती हैं <br>B. समान्तर <br>C. नहीं मिलती <br>D. लम्बवत<br>
+<span class="answer">उत्तर: C</span></div>
+
+<div class="question">12. Coplanar lines कहाँ होती हैं?<br>
+A. अलग planes <br>B. एक plane <br>C. space <br>D. none<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">13. Collinear points?<br>
+A. एक line में <br>B. एक plane में <br>C. अलग-अलग <br>D. none<br>
+<span class="answer">उत्तर: A</span></div>
+
+<div class="question">14. Plane intercept form किससे जुड़ा है?<br>
+A. axes <br>B. distance <br>C. slope <br>D. angle<br>
+<span class="answer">उत्तर: A</span></div>
+
+<div class="question">15. Line और plane के बीच angle किससे?<br>
+A. normal vector <br>B. direction vector <br>C. scalar <br>D. none<br>
+<span class="answer">उत्तर: A</span></div>
+
+<div class="question">16. Distance हमेशा कैसी होती है?<br>
+A. negative <br>B. zero <br>C. positive <br>D. imaginary<br>
+<span class="answer">उत्तर: C</span></div>
+
+<div class="question">17. 3D geometry किसे कहते हैं?<br>
+A. plane geometry <br>B. space geometry <br>C. line geometry <br>D. none<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">18. Direction ratios क्या बताते हैं?<br>
+A. length <br>B. दिशा <br>C. area <br>D. volume<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">19. Vector method क्यों उपयोगी है?<br>
+A. कठिन <br>B. लंबा <br>C. आसान <br>D. बेकार<br>
+<span class="answer">उत्तर: C</span></div>
+
+<div class="question">20. 3D geometry किस class में है?<br>
+A. 11 <br>B. 12 <br>C. 10 <br>D. 9<br>
+<span class="answer">उत्तर: B</span></div>
+
+<br>
+<a href="class12-maths.html">⬅ Back</a>
+
+</section>
+
+</body>
+</html>

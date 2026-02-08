@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<title>Chapter 5 – Continuity & Differentiability</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    color:white;
+    background: linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#1cb5e0);
+    background-size:400% 400%;
+    animation:bg 12s infinite;
+}
+@keyframes bg{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+header{
+    text-align:center;
+    padding:40px 20px;
+}
+section{
+    background:rgba(255,255,255,0.12);
+    margin:20px;
+    padding:20px;
+    border-radius:16px;
+}
+h2{color:#aefeff;}
+.question{
+    background:rgba(255,255,255,0.15);
+    padding:12px;
+    margin:10px 0;
+    border-radius:12px;
+}
+.answer{
+    color:#00f2fe;
+    font-weight:bold;
+}
+a{
+    color:#aefeff;
+    text-decoration:none;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>📘 Chapter 5 – Continuity & Differentiability</h1>
+<p>Class 12 Maths | Bihar Board</p>
+</header>
+
+<section>
+<h2>📌 30 महत्वपूर्ण सूत्र (Important Formulas)</h2>
+
+<p>1. lim x→a f(x) = f(a) ⇒ f(x) सतत (continuous)</p>
+<p>2. Left limit = Right limit ⇒ limit exists</p>
+<p>3. Differentiable ⇒ Continuous</p>
+<p>4. Continuous ⇒ Differentiable (हमेशा नहीं)</p>
+<p>5. d/dx (c) = 0</p>
+<p>6. d/dx (xⁿ) = n xⁿ⁻¹</p>
+<p>7. d/dx (sin x) = cos x</p>
+<p>8. d/dx (cos x) = −sin x</p>
+<p>9. d/dx (tan x) = sec²x</p>
+<p>10. d/dx (cot x) = −cosec²x</p>
+
+<p>11. d/dx (sec x) = sec x tan x</p>
+<p>12. d/dx (cosec x) = −cosec x cot x</p>
+<p>13. d/dx (eˣ) = eˣ</p>
+<p>14. d/dx (aˣ) = aˣ ln a</p>
+<p>15. d/dx (ln x) = 1/x</p>
+<p>16. d/dx (log x) = 1/(x ln10)</p>
+<p>17. Product rule: (uv)' = u'v + uv'</p>
+<p>18. Quotient rule: (u/v)' = (vu' − uv')/v²</p>
+<p>19. Chain rule: dy/dx = dy/du · du/dx</p>
+<p>20. d/dx (sin⁻¹x) = 1/√(1−x²)</p>
+
+<p>21. d/dx (cos⁻¹x) = −1/√(1−x²)</p>
+<p>22. d/dx (tan⁻¹x) = 1/(1+x²)</p>
+<p>23. d/dx (cot⁻¹x) = −1/(1+x²)</p>
+<p>24. d/dx (sec⁻¹x) = 1/(|x|√(x²−1))</p>
+<p>25. d/dx (cosec⁻¹x) = −1/(|x|√(x²−1))</p>
+<p>26. Polynomial function हमेशा continuous होती है</p>
+<p>27. Trigonometric functions continuous होते हैं</p>
+<p>28. Differentiability का अर्थ = slope exists</p>
+<p>29. f'(x) = dy/dx</p>
+<p>30. Non-differentiable point पर sharp corner होता है</p>
+
+</section>
+
+<section>
+<h2>📝 20 Objective Questions</h2>
+
+<div class="question">1. यदि f(x) continuous है तो?<br>
+A. limit नहीं होगा <br>B. limit होगा <br>C. differentiable नहीं <br>D. कुछ नहीं<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">2. Differentiable function हमेशा होता है?<br>
+A. Discontinuous <br>B. Continuous <br>C. Zero <br>D. Undefined<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">3. Continuous function हमेशा differentiable होता है?<br>
+A. हाँ <br>B. नहीं <br>C. कभी-कभी <br>D. हमेशा नहीं<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">4. d/dx (x²) = ?<br>
+A. x <br>B. 2x <br>C. x² <br>D. 1<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">5. d/dx (sin x) = ?<br>
+A. sin x <br>B. −sin x <br>C. cos x <br>D. tan x<br>
+<span class="answer">उत्तर: C</span></div>
+
+<div class="question">6. d/dx (cos x) = ?<br>
+A. sin x <br>B. −cos x <br>C. −sin x <br>D. tan x<br>
+<span class="answer">उत्तर: C</span></div>
+
+<div class="question">7. d/dx (eˣ) = ?<br>
+A. xeˣ <br>B. eˣ <br>C. ln x <br>D. 1<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">8. d/dx (ln x) = ?<br>
+A. x <br>B. 1/x <br>C. ln x <br>D. 0<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">9. Product rule का सूत्र है?<br>
+A. u'v' <br>B. u'v + uv' <br>C. uv <br>D. u+v<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">10. Quotient rule में denominator होता है?<br>
+A. v <br>B. v² <br>C. u² <br>D. uv<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">11. d/dx (tan x) = ?<br>
+A. sec x <br>B. sec²x <br>C. tan x <br>D. cosec²x<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">12. d/dx (cot x) = ?<br>
+A. cosec²x <br>B. sec²x <br>C. −cosec²x <br>D. −sec²x<br>
+<span class="answer">उत्तर: C</span></div>
+
+<div class="question">13. d/dx (sin⁻¹x) = ?<br>
+A. 1/(1+x²) <br>B. 1/√(1−x²) <br>C. −1/√(1−x²) <br>D. √(1−x²)<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">14. Chain rule का उपयोग होता है?<br>
+A. जोड़ में <br>B. गुणा में <br>C. composite function में <br>D. घटाव में<br>
+<span class="answer">उत्तर: C</span></div>
+
+<div class="question">15. Polynomial function होता है?<br>
+A. discontinuous <br>B. always continuous <br>C. undefined <br>D. not differentiable<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">16. f'(x) को क्या कहते हैं?<br>
+A. Integral <br>B. Limit <br>C. Derivative <br>D. Function<br>
+<span class="answer">उत्तर: C</span></div>
+
+<div class="question">17. Non-differentiable point पर होता है?<br>
+A. smooth curve <br>B. straight line <br>C. sharp corner <br>D. circle<br>
+<span class="answer">उत्तर: C</span></div>
+
+<div class="question">18. d/dx (aˣ) = ?<br>
+A. aˣ <br>B. aˣ ln a <br>C. ln a <br>D. x<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">19. Continuous होने के लिए आवश्यक है?<br>
+A. LHL ≠ RHL <br>B. limit ≠ value <br>C. limit = value <br>D. value = 0<br>
+<span class="answer">उत्तर: C</span></div>
+
+<div class="question">20. Differentiability का संबंध है?<br>
+A. area से <br>B. slope से <br>C. volume से <br>D. length से<br>
+<span class="answer">उत्तर: B</span></div>
+
+<br>
+<a href="../class12-maths.html">⬅ Back</a>
+
+</section>
+
+</body>
+</html>

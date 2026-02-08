@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<title>Chapter 12 – Linear Programming</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    color:white;
+    background:linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#1cb5e0);
+    background-size:400% 400%;
+    animation:bg 12s infinite;
+}
+@keyframes bg{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+header{
+    text-align:center;
+    padding:40px 20px;
+}
+section{
+    background:rgba(255,255,255,0.12);
+    margin:20px;
+    padding:20px;
+    border-radius:16px;
+}
+h2{color:#aefeff;}
+.question{
+    background:rgba(255,255,255,0.15);
+    padding:12px;
+    margin:10px 0;
+    border-radius:12px;
+}
+.answer{
+    color:#00f2fe;
+    font-weight:bold;
+}
+a{
+    color:#aefeff;
+    text-decoration:none;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>📘 Chapter 12 – Linear Programming</h1>
+<p>Class 12 Maths | Bihar Board</p>
+</header>
+
+<section>
+<h2>📌 30 महत्वपूर्ण सूत्र (Important Formulas)</h2>
+
+<p>1. Linear programming problem (LPP) में linear inequalities होती हैं</p>
+<p>2. Objective function: Z = ax + by</p>
+<p>3. Constraints linear inequalities होती हैं</p>
+<p>4. x ≥ 0, y ≥ 0 non-negative constraints</p>
+<p>5. Feasible region inequalities से बनता है</p>
+<p>6. Feasible region common shaded area होता है</p>
+<p>7. Corner point method का प्रयोग किया जाता है</p>
+<p>8. Maximum/Minimum value corner points पर मिलती है</p>
+<p>9. Graphical method class 12 में उपयोग होता है</p>
+<p>10. Feasible region empty हो सकता है</p>
+
+<p>11. Unbounded feasible region में max/min नहीं भी मिल सकता</p>
+<p>12. Unique solution एक ही point पर होता है</p>
+<p>13. Multiple solutions तब जब line boundary के साथ coincide करे</p>
+<p>14. Objective function straight line होती है</p>
+<p>15. Constraints straight lines बनाती हैं</p>
+<p>16. Infeasible problem में कोई solution नहीं</p>
+<p>17. Feasible region convex होता है</p>
+<p>18. Corner points intersection से मिलते हैं</p>
+<p>19. Inequality को equation बनाकर line draw करते हैं</p>
+<p>20. Shading test point से तय करते हैं</p>
+
+<p>21. x-axis और y-axis boundary बन सकते हैं</p>
+<p>22. Graph हमेशा first quadrant में होता है</p>
+<p>23. LPP का उपयोग economics में होता है</p>
+<p>24. LPP का उपयोग business में होता है</p>
+<p>25. Profit maximization common problem है</p>
+<p>26. Cost minimization भी LPP है</p>
+<p>27. Linear constraints degree 1 की होती हैं</p>
+<p>28. Objective function linear होती है</p>
+<p>29. Solution region shaded होता है</p>
+<p>30. Linear programming decision making में उपयोगी है</p>
+
+</section>
+
+<section>
+<h2>📝 20 Objective Questions</h2>
+
+<div class="question">1. Linear programming में objective function क्या होती है?<br>
+A. Quadratic <br>B. Linear <br>C. Cubic <br>D. Constant<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">2. Constraints कैसी होती हैं?<br>
+A. Quadratic <br>B. Linear inequalities <br>C. Cubic <br>D. Exponential<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">3. Z = ax + by क्या है?<br>
+A. Constraint <br>B. Objective function <br>C. Equation <br>D. Inequality<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">4. x ≥ 0, y ≥ 0 कहलाते हैं?<br>
+A. Linear constraints <br>B. Boundary <br>C. Non-negative constraints <br>D. Equation<br>
+<span class="answer">उत्तर: C</span></div>
+
+<div class="question">5. Feasible region क्या है?<br>
+A. Line <br>B. Point <br>C. Common shaded region <br>D. Axis<br>
+<span class="answer">उत्तर: C</span></div>
+
+<div class="question">6. Solution कहाँ मिलता है?<br>
+A. Any point <br>B. Origin <br>C. Corner points <br>D. Centre<br>
+<span class="answer">उत्तर: C</span></div>
+
+<div class="question">7. Maximum value कहाँ मिलती है?<br>
+A. Inside region <br>B. Outside <br>C. Corner points <br>D. Axis<br>
+<span class="answer">उत्तर: C</span></div>
+
+<div class="question">8. Graphical method किस class में है?<br>
+A. 10 <br>B. 11 <br>C. 12 <br>D. 9<br>
+<span class="answer">उत्तर: C</span></div>
+
+<div class="question">9. Feasible region empty हो तो?<br>
+A. Solution exists <br>B. No solution <br>C. Infinite solution <br>D. Max solution<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">10. Objective function का graph कैसा होता है?<br>
+A. Curve <br>B. Straight line <br>C. Circle <br>D. Parabola<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">11. Corner points कैसे मिलते हैं?<br>
+A. Guess से <br>B. Intersection से <br>C. Integration से <br>D. Differentiation से<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">12. Linear programming का उपयोग?<br>
+A. Geometry <br>B. Algebra <br>C. Economics <br>D. Trigonometry<br>
+<span class="answer">उत्तर: C</span></div>
+
+<div class="question">13. Profit maximization किसका example है?<br>
+A. Matrix <br>B. LPP <br>C. Probability <br>D. Vector<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">14. Feasible region हमेशा होता है?<br>
+A. Convex <br>B. Concave <br>C. Circular <br>D. Triangle<br>
+<span class="answer">उत्तर: A</span></div>
+
+<div class="question">15. Non-negative constraints क्यों जरूरी हैं?<br>
+A. Graph के लिए <br>B. Reality दिखाने के लिए <br>C. Time pass <br>D. Decoration<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">16. Unbounded region में?<br>
+A. Always solution <br>B. No solution <br>C. Max/Min may not exist <br>D. Zero solution<br>
+<span class="answer">उत्तर: C</span></div>
+
+<div class="question">17. Linear constraints का degree होता है?<br>
+A. 1 <br>B. 2 <br>C. 3 <br>D. 0<br>
+<span class="answer">उत्तर: A</span></div>
+
+<div class="question">18. Shading test point से तय करते हैं?<br>
+A. Axis <br>B. Region <br>C. Line <br>D. Origin<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">19. LPP किस quadrant में solve होता है?<br>
+A. Any <br>B. First <br>C. Second <br>D. Third<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">20. Linear programming किसके लिए useful है?<br>
+A. Decision making <br>B. Drawing <br>C. Painting <br>D. Singing<br>
+<span class="answer">उत्तर: A</span></div>
+
+<br>
+<a href="class12-maths.html">⬅ Back</a>
+
+</section>
+
+</body>
+</html>

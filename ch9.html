@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<title>Chapter 9 – Differential Equations</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    color:white;
+    background: linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#1cb5e0);
+    background-size:400% 400%;
+    animation:bg 12s infinite;
+}
+@keyframes bg{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+header{
+    text-align:center;
+    padding:40px 20px;
+}
+section{
+    background:rgba(255,255,255,0.12);
+    margin:20px;
+    padding:20px;
+    border-radius:16px;
+}
+h2{color:#aefeff;}
+.question{
+    background:rgba(255,255,255,0.15);
+    padding:12px;
+    margin:10px 0;
+    border-radius:12px;
+}
+.answer{
+    color:#00f2fe;
+    font-weight:bold;
+}
+a{
+    color:#aefeff;
+    text-decoration:none;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>📘 Chapter 9 – Differential Equations</h1>
+<p>Class 12 Maths | Bihar Board</p>
+</header>
+
+<section>
+<h2>📌 30 महत्वपूर्ण सूत्र (Important Formulas)</h2>
+
+<p>1. Differential equation में derivative शामिल होता है</p>
+<p>2. Order = highest order derivative</p>
+<p>3. Degree = highest power of derivative</p>
+<p>4. dy/dx = f(x) ⇒ first order DE</p>
+<p>5. d²y/dx² ⇒ second order DE</p>
+<p>6. General solution में constant होता है</p>
+<p>7. Particular solution constant हटाने से मिलता है</p>
+<p>8. Variables separable form: dy/dx = g(x)h(y)</p>
+<p>9. dy/h(y) = g(x)dx</p>
+<p>10. ∫dy = ∫f(x)dx</p>
+
+<p>11. Solution = function जो DE satisfy करे</p>
+<p>12. Differential equation calculus का भाग है</p>
+<p>13. Order कभी fraction नहीं होता</p>
+<p>14. Degree तभी defined जब equation polynomial हो</p>
+<p>15. Homogeneous DE में y/x का प्रयोग</p>
+<p>16. Linear DE का standard form: dy/dx + Py = Q</p>
+<p>17. Integrating factor (IF) = e^∫P dx</p>
+<p>18. Solution: y·IF = ∫(Q·IF)dx + C</p>
+<p>19. DE का उपयोग physics में होता है</p>
+<p>20. DE का उपयोग engineering में होता है</p>
+
+<p>21. Growth & decay problems DE से हल होते हैं</p>
+<p>22. Population growth = DE</p>
+<p>23. Motion equations DE से जुड़ी हैं</p>
+<p>24. Solution graph curve देता है</p>
+<p>25. dy/dx = y/x ⇒ homogeneous</p>
+<p>26. dy/dx = x+y ⇒ linear DE</p>
+<p>27. IF हमेशा exponential होता है</p>
+<p>28. DE में arbitrary constant होता है</p>
+<p>29. Order = highest derivative order</p>
+<p>30. Degree = highest power of highest derivative</p>
+
+</section>
+
+<section>
+<h2>📝 20 Objective Questions</h2>
+
+<div class="question">1. Differential equation में क्या होता है?<br>
+A. Integral <br>B. Derivative <br>C. Matrix <br>D. Probability<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">2. dy/dx का order है?<br>
+A. 0 <br>B. 1 <br>C. 2 <br>D. 3<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">3. d²y/dx² का order?<br>
+A. 1 <br>B. 2 <br>C. 3 <br>D. 0<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">4. Order क्या दर्शाता है?<br>
+A. power <br>B. derivative <br>C. highest derivative <br>D. constant<br>
+<span class="answer">उत्तर: C</span></div>
+
+<div class="question">5. Degree क्या दर्शाता है?<br>
+A. variable <br>B. power of derivative <br>C. order <br>D. constant<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">6. dy/dx = f(x) है?<br>
+A. second order <br>B. first order <br>C. zero order <br>D. third order<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">7. Linear DE का standard form?<br>
+A. dy/dx = y <br>B. dy/dx + Py = Q <br>C. dy/dx = x/y <br>D. y = mx + c<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">8. Integrating factor होता है?<br>
+A. constant <br>B. polynomial <br>C. exponential <br>D. zero<br>
+<span class="answer">उत्तर: C</span></div>
+
+<div class="question">9. IF = ?<br>
+A. ∫Pdx <br>B. e^P <br>C. e^∫Pdx <br>D. Pdx<br>
+<span class="answer">उत्तर: C</span></div>
+
+<div class="question">10. Solution में क्या होता है?<br>
+A. variable <br>B. constant <br>C. derivative <br>D. matrix<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">11. Particular solution में क्या नहीं होता?<br>
+A. variable <br>B. constant <br>C. derivative <br>D. function<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">12. Variables separable में क्या करते हैं?<br>
+A. add <br>B. multiply <br>C. separate variables <br>D. subtract<br>
+<span class="answer">उत्तर: C</span></div>
+
+<div class="question">13. dy/dx = y/x है?<br>
+A. linear <br>B. homogeneous <br>C. exact <br>D. trivial<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">14. Differential equation का प्रयोग?<br>
+A. physics <br>B. chemistry <br>C. economics <br>D. सभी में<br>
+<span class="answer">उत्तर: D</span></div>
+
+<div class="question">15. Order कभी क्या नहीं होता?<br>
+A. integer <br>B. whole number <br>C. fraction <br>D. positive<br>
+<span class="answer">उत्तर: C</span></div>
+
+<div class="question">16. Degree कब defined होती है?<br>
+A. हमेशा <br>B. polynomial होने पर <br>C. linear होने पर <br>D. constant पर<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">17. dy/dx = x+y है?<br>
+A. homogeneous <br>B. linear <br>C. separable <br>D. exact<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">18. IF का उपयोग किसमें होता है?<br>
+A. linear DE <br>B. homogeneous <br>C. exact <br>D. none<br>
+<span class="answer">उत्तर: A</span></div>
+
+<div class="question">19. Differential equation किस chapter का हिस्सा है?<br>
+A. Algebra <br>B. Calculus <br>C. Geometry <br>D. Probability<br>
+<span class="answer">उत्तर: B</span></div>
+
+<div class="question">20. DE का graph क्या देता है?<br>
+A. line <br>B. curve <br>C. point <br>D. plane<br>
+<span class="answer">उत्तर: B</span></div>
+
+<br>
+<a href="class12-maths.html">⬅ Back</a>
+
+</section>
+
+</body>
+</html>
