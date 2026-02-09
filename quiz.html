@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
 <meta charset="UTF-8">
-<title>Online Quiz | Daily Update Zone</title>
+<title>Online Physics Quiz | Daily Update Zone</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
@@ -19,45 +19,23 @@ body{
     50%{background-position:100% 50%;}
     100%{background-position:0% 50%;}
 }
-
-header{
-    text-align:center;
-    padding:50px 20px;
-}
-
+header{text-align:center;padding:40px 20px;}
 section{
     background:rgba(255,255,255,0.12);
     margin:20px;
     padding:25px;
     border-radius:18px;
 }
-
 .question{
     background:rgba(255,255,255,0.15);
     padding:15px;
     margin:15px 0;
     border-radius:14px;
 }
-
-.question p{
-    margin:0 0 10px;
-    font-weight:bold;
-}
-
-.option{
-    display:block;
-    margin:6px 0;
-    cursor:pointer;
-}
-
-.result{
-    margin-top:8px;
-    font-size:16px;
-    font-weight:bold;
-}
-.correct{color:#00ff9d;}
-.wrong{color:#ff4d4d;}
-
+.option{display:block;margin:6px 0;cursor:pointer;}
+.correct{color:#00ff9d;font-weight:bold;}
+.wrong{color:#ff4d4d;font-weight:bold;}
+.score{font-weight:bold;margin:10px 0;}
 .btn{
     display:inline-block;
     margin-top:20px;
@@ -74,133 +52,83 @@ section{
 <body>
 
 <header>
-    <h1>🧠 Online Quiz</h1>
-    <p>Physics MCQ Practice | Class 12 Bihar Board</p>
+<h1>⚛ Physics Online Quiz</h1>
+<p>Class 12 | Bihar Board</p>
+<div class="score">⭐ Score: <span id="score">0</span> / 30</div>
 </header>
 
-<section>
+<section id="quiz"></section>
 
-<!-- Q1 -->
-<div class="question" data-answer="b">
-<p>1. SI unit of electric charge is?</p>
-<label class="option"><input type="radio" name="q1" value="a"> Ampere</label>
-<label class="option"><input type="radio" name="q1" value="b"> Coulomb</label>
-<label class="option"><input type="radio" name="q1" value="c"> Volt</label>
-<label class="option"><input type="radio" name="q1" value="d"> Ohm</label>
-<div class="result"></div>
-</div>
-
-<!-- Q2 -->
-<div class="question" data-answer="a">
-<p>2. Charge of electron is?</p>
-<label class="option"><input type="radio" name="q2" value="a"> −1.6 × 10⁻¹⁹ C</label>
-<label class="option"><input type="radio" name="q2" value="b"> +1.6 × 10⁻¹⁹ C</label>
-<label class="option"><input type="radio" name="q2" value="c"> 1 C</label>
-<label class="option"><input type="radio" name="q2" value="d"> 0</label>
-<div class="result"></div>
-</div>
-
-<!-- Q3 -->
-<div class="question" data-answer="c">
-<p>3. Like charges always?</p>
-<label class="option"><input type="radio" name="q3" value="a"> Attract</label>
-<label class="option"><input type="radio" name="q3" value="b"> Neutralize</label>
-<label class="option"><input type="radio" name="q3" value="c"> Repel</label>
-<label class="option"><input type="radio" name="q3" value="d"> Destroy</label>
-<div class="result"></div>
-</div>
-
-<!-- Q4 -->
-<div class="question" data-answer="d">
-<p>4. SI unit of electric field is?</p>
-<label class="option"><input type="radio" name="q4" value="a"> N</label>
-<label class="option"><input type="radio" name="q4" value="b"> J</label>
-<label class="option"><input type="radio" name="q4" value="c"> C</label>
-<label class="option"><input type="radio" name="q4" value="d"> N/C</label>
-<div class="result"></div>
-</div>
-
-<!-- Q5 -->
-<div class="question" data-answer="b">
-<p>5. Coulomb’s law is valid for?</p>
-<label class="option"><input type="radio" name="q5" value="a"> Large bodies</label>
-<label class="option"><input type="radio" name="q5" value="b"> Point charges</label>
-<label class="option"><input type="radio" name="q5" value="c"> Currents</label>
-<label class="option"><input type="radio" name="q5" value="d"> Fields</label>
-<div class="result"></div>
-</div>
-
-<!-- Q6 -->
-<div class="question" data-answer="a">
-<p>6. Electric field is a?</p>
-<label class="option"><input type="radio" name="q6" value="a"> Vector quantity</label>
-<label class="option"><input type="radio" name="q6" value="b"> Scalar quantity</label>
-<label class="option"><input type="radio" name="q6" value="c"> Constant</label>
-<label class="option"><input type="radio" name="q6" value="d"> None</label>
-<div class="result"></div>
-</div>
-
-<!-- Q7 -->
-<div class="question" data-answer="c">
-<p>7. Value of ε₀ is?</p>
-<label class="option"><input type="radio" name="q7" value="a"> 9 × 10⁹</label>
-<label class="option"><input type="radio" name="q7" value="b"> 1.6 × 10⁻¹⁹</label>
-<label class="option"><input type="radio" name="q7" value="c"> 8.85 × 10⁻¹²</label>
-<label class="option"><input type="radio" name="q7" value="d"> 10⁻⁶</label>
-<div class="result"></div>
-</div>
-
-<!-- Q8 -->
-<div class="question" data-answer="b">
-<p>8. Electric field lines start from?</p>
-<label class="option"><input type="radio" name="q8" value="a"> Negative charge</label>
-<label class="option"><input type="radio" name="q8" value="b"> Positive charge</label>
-<label class="option"><input type="radio" name="q8" value="c"> Neutral body</label>
-<label class="option"><input type="radio" name="q8" value="d"> Earth</label>
-<div class="result"></div>
-</div>
-
-<!-- Q9 -->
-<div class="question" data-answer="d">
-<p>9. SI unit of electric potential is?</p>
-<label class="option"><input type="radio" name="q9" value="a"> Joule</label>
-<label class="option"><input type="radio" name="q9" value="b"> Coulomb</label>
-<label class="option"><input type="radio" name="q9" value="c"> Ampere</label>
-<label class="option"><input type="radio" name="q9" value="d"> Volt</label>
-<div class="result"></div>
-</div>
-
-<!-- Q10 -->
-<div class="question" data-answer="a">
-<p>10. Electric force is?</p>
-<label class="option"><input type="radio" name="q10" value="a"> Conservative</label>
-<label class="option"><input type="radio" name="q10" value="b"> Non-conservative</label>
-<label class="option"><input type="radio" name="q10" value="c"> Variable</label>
-<label class="option"><input type="radio" name="q10" value="d"> Zero</label>
-<div class="result"></div>
-</div>
-
+<div style="text-align:center">
 <a href="index.html" class="btn">⬅ Back</a>
-
-</section>
+</div>
 
 <script>
-const questions = document.querySelectorAll(".question");
+const questions = [
+["विद्युत आवेश की SI इकाई क्या है?",["कूलॉम","वोल्ट","ओम","एम्पियर"],0],
+["इलेक्ट्रॉन का आवेश कितना होता है?",["-1.6×10⁻¹⁹ C","+1.6×10⁻¹⁹ C","0","1 C"],0],
+["ओम का नियम क्या है?",["V = IR","P = VI","F = ma","E = mc²"],0],
+["विद्युत क्षेत्र की SI इकाई क्या है?",["N/C","J","W","V"],0],
+["प्रकाश की चाल निर्वात में कितनी है?",["3×10⁸ m/s","3×10⁶ m/s","10⁸ m/s","3×10⁵ m/s"],0],
+["विद्युत शक्ति की इकाई?",["जूल","वाट","वोल्ट","ओम"],1],
+["धारा की SI इकाई?",["एम्पियर","वोल्ट","ओम","वाट"],0],
+["AC की आवृत्ति भारत में कितनी है?",["60 Hz","50 Hz","100 Hz","25 Hz"],1],
+["कैपेसिटर में ऊर्जा किस रूप में संचित होती है?",["विद्युत क्षेत्र","चुंबकीय क्षेत्र","ऊष्मा","प्रकाश"],0],
+["चुंबकीय क्षेत्र की SI इकाई?",["टेस्ला","वेबर","हेनरी","ओम"],0],
 
-questions.forEach(q=>{
-    const correct = q.dataset.answer;
-    const options = q.querySelectorAll("input");
-    const result = q.querySelector(".result");
+["विद्युत विभव का सूत्र?",["W/q","q/W","IR","VI"],0],
+["धारा क्या है?",["आवेश का प्रवाह","ऊर्जा","बल","विभव"],0],
+["कूलॉम का नियम संबंधित है?",["आवेश से","द्रव्यमान से","ऊर्जा से","चुंबक से"],0],
+["प्रोटॉन का आवेश?",["+1.6×10⁻¹⁹ C","-1.6×10⁻¹⁹ C","0","2 C"],0],
+["विद्युत प्रतिरोध निर्भर करता है?",["लंबाई पर","ताप पर","क्षेत्रफल पर","सभी पर"],3],
 
-    options.forEach(opt=>{
-        opt.addEventListener("change", ()=>{
-            if(opt.value === correct){
-                result.textContent = "✅ Correct Answer";
-                result.className = "result correct";
+["ओम की इकाई किसकी है?",["प्रतिरोध","धारा","वोल्टेज","शक्ति"],0],
+["फ्यूज तार किस धातु का होता है?",["टिन-सीसा मिश्र","तांबा","लोहा","एल्यूमिनियम"],0],
+["विद्युत मीटर किसे मापता है?",["ऊर्जा","धारा","वोल्टेज","प्रतिरोध"],0],
+["विद्युत बल किस नियम पर आधारित है?",["कूलॉम","न्यूटन","फैराडे","ओम"],0],
+["धारा घनत्व का सूत्र?",["I/A","V/I","IR","A/I"],0],
+
+["चुंबकीय फ्लक्स की इकाई?",["वेबर","टेस्ला","हेनरी","वाट"],0],
+["विद्युत धारा की दिशा?",["धन से ऋण","ऋण से धन","दोनों","कोई नहीं"],0],
+["बैटरी किस ऊर्जा को बदलती है?",["रासायनिक → विद्युत","यांत्रिक → ऊष्मा","प्रकाश → विद्युत","ऊष्मा → प्रकाश"],0],
+["सेमीकंडक्टर का उदाहरण?",["सिलिकॉन","लोहा","तांबा","लकड़ी"],0],
+["विद्युत परिपथ में स्विच का काम?",["धारा चालू/बंद","वोल्ट बढ़ाना","प्रतिरोध घटाना","ऊर्जा बढ़ाना"],0],
+
+["कंडक्टर में धारा क्यों बहती है?",["मुक्त इलेक्ट्रॉन","प्रोटॉन","न्यूट्रॉन","आयन"],0],
+["विद्युत क्षेत्र रेखाएँ निकलती हैं?",["धन आवेश से","ऋण आवेश से","दोनों से","कोई नहीं"],0],
+["कैपेसिटेंस की SI इकाई?",["फैराड","ओम","हेनरी","वोल्ट"],0],
+["विद्युत हीटर में कौन सा प्रभाव?",["ऊष्मीय प्रभाव","चुंबकीय","रासायनिक","प्रकाशीय"],0]
+];
+
+let score=0;
+const quiz=document.getElementById("quiz");
+
+questions.forEach((q,i)=>{
+    const div=document.createElement("div");
+    div.className="question";
+    div.innerHTML=`<p>${i+1}. ${q[0]}</p>`+
+    q[1].map((o,j)=>`
+    <label class="option">
+    <input type="radio" name="q${i}" value="${j}"> ${o}
+    </label>`).join("")+
+    `<div class="result"></div>`;
+    quiz.appendChild(div);
+
+    div.querySelectorAll("input").forEach(inp=>{
+        inp.addEventListener("change",()=>{
+            const res=div.querySelector(".result");
+            if(inp.value==q[2]){
+                if(!div.classList.contains("done")){
+                    score++;
+                    document.getElementById("score").textContent=score;
+                }
+                res.textContent="✅ सही उत्तर";
+                res.className="correct";
             }else{
-                result.textContent = "❌ Wrong Answer";
-                result.className = "result wrong";
+                res.textContent="❌ गलत उत्तर";
+                res.className="wrong";
             }
+            div.classList.add("done");
         });
     });
 });
@@ -208,4 +136,3 @@ questions.forEach(q=>{
 
 </body>
 </html>
-
