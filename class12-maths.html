@@ -21,14 +21,32 @@ body{
 }
 header{
     text-align:center;
-    padding:40px 20px;
+    padding:30px 20px 15px;
 }
+
+/* SEARCH BAR */
+.search-box{
+    max-width:400px;
+    margin:15px auto 0;
+}
+.search-box input{
+    width:100%;
+    padding:10px 15px;
+    border-radius:25px;
+    border:none;
+    outline:none;
+    font-size:15px;
+}
+
+/* SECTION */
 section{
     background:rgba(255,255,255,0.12);
     margin:20px;
     padding:20px;
     border-radius:16px;
 }
+
+/* CHAPTER CARD */
 .chapter{
     background:rgba(255,255,255,0.15);
     padding:12px;
@@ -47,54 +65,74 @@ a{
 
 <header>
     <h1>📘 Class 12 Mathematics</h1>
-    <p>Chapterwise PDF Notes</p>
+    <p>Chapterwise Notes</p>
+
+    <!-- SEARCH BAR -->
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search chapter...">
+    </div>
 </header>
 
 <section>
 
 <div class="chapter">Chapter 1 – Relations & Functions  
-<br><a href="ch1.html">📄 open</a></div>
+<br><a href="ch1.html">📄 Open</a></div>
 
 <div class="chapter">Chapter 2 – Inverse Trigonometric Functions  
-<br><a href="ch2.html">📄 open</a></div>
+<br><a href="ch2.html">📄 Open</a></div>
 
 <div class="chapter">Chapter 3 – Matrices  
-<br><a href="ch3.html">📄 open</a></div>
+<br><a href="ch3.html">📄 Open</a></div>
 
 <div class="chapter">Chapter 4 – Determinants  
-<br><a href="ch4.html">📄 open</a></div>
+<br><a href="ch4.html">📄 Open</a></div>
 
 <div class="chapter">Chapter 5 – Continuity & Differentiability  
-<br><a href="ch5.html">📄 open</a></div>
+<br><a href="ch5.html">📄 Open</a></div>
 
 <div class="chapter">Chapter 6 – Applications of Derivatives  
-<br><a href="ch6.html">📄 open</a></div>
+<br><a href="ch6.html">📄 Open</a></div>
 
 <div class="chapter">Chapter 7 – Integrals  
-<br><a href="ch7.html">📄 open</a></div>
+<br><a href="ch7.html">📄 Open</a></div>
 
 <div class="chapter">Chapter 8 – Applications of Integrals  
-<br><a href="ch8.html">📄 open</a></div>
+<br><a href="ch8.html">📄 Open</a></div>
 
 <div class="chapter">Chapter 9 – Differential Equations  
-<br><a href="ch9.html">📄 open</a></div>
+<br><a href="ch9.html">📄 Open</a></div>
 
 <div class="chapter">Chapter 10 – Vector Algebra  
-<br><a href="ch10.html">📄 open</a></div>
+<br><a href="ch10.html">📄 Open</a></div>
 
 <div class="chapter">Chapter 11 – Three Dimensional Geometry  
-<br><a href="ch11.html">📄 open</a></div>
+<br><a href="ch11.html">📄 Open</a></div>
 
 <div class="chapter">Chapter 12 – Linear Programming  
-<br><a href="ch12.html">📄 open</a></div>
+<br><a href="ch12.html">📄 Open</a></div>
 
 <div class="chapter">Chapter 13 – Probability  
-<br><a href="ch13.html">📄 open</a></div>
+<br><a href="ch13.html">📄 Open</a></div>
 
 <br>
 <a href="class12-notes.html">⬅ Back</a>
 
 </section>
+
+<!-- SEARCH SCRIPT -->
+<script>
+const searchInput = document.getElementById("searchInput");
+
+searchInput.addEventListener("keyup", function () {
+    const value = searchInput.value.toLowerCase();
+    const chapters = document.querySelectorAll(".chapter");
+
+    chapters.forEach(chapter => {
+        const text = chapter.innerText.toLowerCase();
+        chapter.style.display = text.includes(value) ? "block" : "none";
+    });
+});
+</script>
 
 </body>
 </html>

@@ -10,13 +10,7 @@ body{
     margin:0;
     font-family: Arial, sans-serif;
     color:white;
-    background: linear-gradient(
-        -45deg,
-        #0f2027,
-        #203a43,
-        #2c5364,
-        #1cb5e0
-    );
+    background: linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#1cb5e0);
     background-size:400% 400%;
     animation:bg 12s infinite;
 }
@@ -28,13 +22,9 @@ body{
 
 /* Header */
 header{
+    position:relative;
     text-align:center;
     padding:60px 20px;
-    animation:fadeDown 1s ease;
-}
-@keyframes fadeDown{
-    from{opacity:0; transform:translateY(-30px);}
-    to{opacity:1; transform:translateY(0);}
 }
 header h1{
     font-size:38px;
@@ -44,17 +34,31 @@ header p{
     opacity:0.85;
 }
 
+/* 🔍 Search box */
+.search-box{
+    position:absolute;
+    top:15px;
+    right:15px;
+}
+.search-box input{
+    padding:8px 14px;
+    border-radius:20px;
+    border:none;
+    outline:none;
+    font-size:14px;
+    width:180px;
+}
+.search-box input:focus{
+    width:220px;
+    transition:0.3s;
+}
+
 /* Section */
 section{
     background:rgba(255,255,255,0.12);
     margin:20px;
     padding:25px;
     border-radius:18px;
-    animation:fadeUp 1s ease;
-}
-@keyframes fadeUp{
-    from{opacity:0; transform:translateY(40px);}
-    to{opacity:1; transform:translateY(0);}
 }
 
 /* Subject Card */
@@ -91,47 +95,78 @@ footer{
 <body>
 
 <header>
-    <h1>📘 Class 12 Bihar Board Notes</h1>
-    <p>All Subjects • PDF Notes • Free</p>
+
+<!-- 🔍 SEARCH BAR -->
+<div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search subject...">
+</div>
+
+<h1>📘 Class 12 Bihar Board Notes</h1>
+<p>All Subjects • Free Notes • MCQ • PDF</p>
 </header>
 
 <section>
-    <div class="subject">
-        <strong>📐 Mathematics</strong>
-        <p>Chapter-wise Maths PDF notes</p>
-        <a href="class12-maths.html" class="btn">Download</a>
-    </div>
 
-    <div class="subject">
-        <strong>⚛ Physics</strong>
-        <p>Theory + Numericals PDF</p>
-        <a href="class12-physics.html" class="btn">Download</a>
-    </div>
+<div class="subject">
+    <strong>📐 Mathematics</strong>
+    <p>Chapter-wise Maths Notes</p>
+    <a href="class12-maths.html" class="btn">Open</a>
+</div>
 
-    <div class="subject">
-        <strong>🧪 Chemistry</strong>
-        <p>Organic, Inorganic & Physical</p>
-        <a href="class12-chemistry.html" class="btn">Download</a>
-    </div>
+<div class="subject">
+    <strong>⚛ Physics</strong>
+    <p>Theory + Numericals + MCQ</p>
+    <a href="class12-physics.html" class="btn">Open</a>
+</div>
 
-    <div class="subject">
-        <strong>📖 Biology</strong>
-        <p>NCERT based notes</p>
-        <a href="class12-biology.html" class="btn">Download</a>
-    </div>
+<div class="subject">
+    <strong>🧪 Chemistry</strong>
+    <p>Organic, Inorganic & Physical</p>
+    <a href="class12-chemistry.html" class="btn">Open</a>
+</div>
 
-    <div class="subject">
-        <strong>📘 Hindi / English</strong>
-        <p>Prose, Poetry & Grammar</p>
-        <a href="#" class="btn">Coming Soon</a>
-    </div>
+<div class="subject">
+    <strong>🧬 Biology</strong>
+    <p>NCERT + Bihar Board Notes</p>
+    <a href="class12-biology.html" class="btn">Open</a>
+</div>
 
-    <a href="Study-material.html" class="btn">⬅ Back</a>
+<div class="subject">
+    <strong>📖 Hindi</strong>
+    <p>गद्यखंड • काव्यखंड • प्रश्न उत्तर</p>
+    <a href="class12-hindi.html" class="btn">Open</a>
+</div>
+
+<div class="subject">
+    <strong>📘 English</strong>
+    <p>Prose + Poetry + Grammar</p>
+    <a href="class12-english.html" class="btn">Open</a>
+</div>
+
 </section>
 
 <footer>
-    © 2026 Daily Update Zone | Class 12 Notes
+© 2026 Daily Update Zone | Bihar Board Class 12
 </footer>
+
+
+<!-- ✅ WORKING SEARCH JAVASCRIPT -->
+<script>
+const searchInput = document.getElementById("searchInput");
+
+searchInput.addEventListener("keyup", function () {
+    const value = searchInput.value.toLowerCase();
+    const subjects = document.querySelectorAll(".subject");
+
+    subjects.forEach(item => {
+        const text = item.innerText.toLowerCase();
+        item.style.display = text.includes(value) ? "block" : "none";
+    });
+});
+</script>
+
+  <a href="index.html">⬅ Back to Home</a>
+</section>
 
 </body>
 </html>

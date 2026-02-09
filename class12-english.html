@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<title>English – Class 12 | Bihar Board</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    color:white;
+    background:linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#1cb5e0);
+    background-size:400% 400%;
+    animation:bg 12s infinite;
+}
+@keyframes bg{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+header{
+    text-align:center;
+    padding:40px 20px 15px;
+}
+
+/* SEARCH BAR */
+.search-box{
+    max-width:420px;
+    margin:15px auto 0;
+}
+.search-box input{
+    width:100%;
+    padding:10px 16px;
+    border-radius:25px;
+    border:none;
+    outline:none;
+    font-size:15px;
+}
+
+section{
+    background:rgba(255,255,255,0.12);
+    margin:20px;
+    padding:25px;
+    border-radius:18px;
+}
+.chapter{
+    background:rgba(255,255,255,0.15);
+    padding:12px;
+    margin:10px 0;
+    border-radius:12px;
+}
+a{
+    color:#aefeff;
+    text-decoration:none;
+    font-weight:bold;
+}
+.btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 22px;
+    border-radius:25px;
+    background:#00f2fe;
+    color:#000;
+    text-decoration:none;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ===== HEADER + SEARCH ===== -->
+<header>
+    <h1>📘 English – Class 12</h1>
+    <p>Bihar Board | Prose & Poetry</p>
+
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search prose / poetry...">
+    </div>
+</header>
+
+<section>
+
+<h2>📘 English – Prose Section</h2>
+
+<div class="chapter">1. Indian Civilisation and Culture  
+<br><a href="english/prose/ch1.html">📄 Open</a></div>
+
+<div class="chapter">2. Bharat is My Home  
+<br><a href="english/prose/ch2.html">📄 Open</a></div>
+
+<div class="chapter">3. A Pinch of Snuff  
+<br><a href="english/prose/ch3.html">📄 Open</a></div>
+
+<div class="chapter">4. I Have a Dream  
+<br><a href="english/prose/ch4.html">📄 Open</a></div>
+
+<div class="chapter">5. Ideas that Have Helped Mankind  
+<br><a href="english/prose/ch5.html">📄 Open</a></div>
+
+<div class="chapter">6. The Artist  
+<br><a href="english/prose/ch6.html">📄 Open</a></div>
+
+<div class="chapter">7. A Child Born  
+<br><a href="english/prose/ch7.html">📄 Open</a></div>
+
+<div class="chapter">8. How Free is the Press  
+<br><a href="english/prose/ch8.html">📄 Open</a></div>
+
+<div class="chapter">9. The Earth  
+<br><a href="english/prose/ch9.html">📄 Open</a></div>
+
+<div class="chapter">10. India Through a Traveller’s Eyes  
+<br><a href="english/prose/ch10.html">📄 Open</a></div>
+
+<div class="chapter">11. A Marriage Proposal  
+<br><a href="english/prose/ch11.html">📄 Open</a></div>
+
+<hr style="opacity:0.3">
+
+<h2>📕 English – Poetry Section</h2>
+
+<div class="chapter">1. Sweetest Love I Do Not Go  
+<br><a href="english/poetry/p1.html">📄 Open</a></div>
+
+<div class="chapter">2. Song of Myself  
+<br><a href="english/poetry/p2.html">📄 Open</a></div>
+
+<div class="chapter">3. Now the Leaves are Falling Fast  
+<br><a href="english/poetry/p3.html">📄 Open</a></div>
+
+<div class="chapter">4. Ode to Autumn  
+<br><a href="english/poetry/p4.html">📄 Open</a></div>
+
+<div class="chapter">5. An Epitaph  
+<br><a href="english/poetry/p5.html">📄 Open</a></div>
+
+<div class="chapter">6. The Soldier  
+<br><a href="english/poetry/p6.html">📄 Open</a></div>
+
+<div class="chapter">7. Macavity: The Mystery Cat  
+<br><a href="english/poetry/p7.html">📄 Open</a></div>
+
+<div class="chapter">8. Fire Hymn  
+<br><a href="english/poetry/p8.html">📄 Open</a></div>
+
+<div class="chapter">9. Snake  
+<br><a href="english/poetry/p9.html">📄 Open</a></div>
+
+<div class="chapter">10. My Grandmother’s House  
+<br><a href="english/poetry/p10.html">📄 Open</a></div>
+
+<br>
+<a href="class12-notes.html" class="btn">⬅ Back</a>
+
+</section>
+
+<!-- ===== SEARCH SCRIPT ===== -->
+<script>
+const searchInput = document.getElementById("searchInput");
+
+searchInput.addEventListener("keyup", function(){
+    const value = searchInput.value.toLowerCase();
+    const chapters = document.querySelectorAll(".chapter");
+
+    chapters.forEach(chapter=>{
+        const text = chapter.innerText.toLowerCase();
+        chapter.style.display = text.includes(value) ? "block" : "none";
+    });
+});
+</script>
+
+</body>
+</html>
