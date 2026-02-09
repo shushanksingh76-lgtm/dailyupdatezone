@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Online Quiz | Daily Update Zone</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    color:white;
+    background:linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#1cb5e0);
+    background-size:400% 400%;
+    animation:bg 12s infinite;
+}
+@keyframes bg{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+header{
+    text-align:center;
+    padding:50px 20px;
+}
+
+section{
+    background:rgba(255,255,255,0.12);
+    margin:20px;
+    padding:25px;
+    border-radius:18px;
+}
+
+.question{
+    background:rgba(255,255,255,0.15);
+    padding:15px;
+    margin:15px 0;
+    border-radius:14px;
+}
+
+.question p{
+    margin:0 0 10px;
+    font-weight:bold;
+}
+
+.option{
+    display:block;
+    margin:6px 0;
+    cursor:pointer;
+}
+
+.result{
+    margin-top:8px;
+    font-size:16px;
+    font-weight:bold;
+}
+.correct{color:#00ff9d;}
+.wrong{color:#ff4d4d;}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:10px 22px;
+    border-radius:25px;
+    background:#00f2fe;
+    color:#000;
+    text-decoration:none;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🧠 Online Quiz</h1>
+    <p>Physics MCQ Practice | Class 12 Bihar Board</p>
+</header>
+
+<section>
+
+<!-- Q1 -->
+<div class="question" data-answer="b">
+<p>1. SI unit of electric charge is?</p>
+<label class="option"><input type="radio" name="q1" value="a"> Ampere</label>
+<label class="option"><input type="radio" name="q1" value="b"> Coulomb</label>
+<label class="option"><input type="radio" name="q1" value="c"> Volt</label>
+<label class="option"><input type="radio" name="q1" value="d"> Ohm</label>
+<div class="result"></div>
+</div>
+
+<!-- Q2 -->
+<div class="question" data-answer="a">
+<p>2. Charge of electron is?</p>
+<label class="option"><input type="radio" name="q2" value="a"> −1.6 × 10⁻¹⁹ C</label>
+<label class="option"><input type="radio" name="q2" value="b"> +1.6 × 10⁻¹⁹ C</label>
+<label class="option"><input type="radio" name="q2" value="c"> 1 C</label>
+<label class="option"><input type="radio" name="q2" value="d"> 0</label>
+<div class="result"></div>
+</div>
+
+<!-- Q3 -->
+<div class="question" data-answer="c">
+<p>3. Like charges always?</p>
+<label class="option"><input type="radio" name="q3" value="a"> Attract</label>
+<label class="option"><input type="radio" name="q3" value="b"> Neutralize</label>
+<label class="option"><input type="radio" name="q3" value="c"> Repel</label>
+<label class="option"><input type="radio" name="q3" value="d"> Destroy</label>
+<div class="result"></div>
+</div>
+
+<!-- Q4 -->
+<div class="question" data-answer="d">
+<p>4. SI unit of electric field is?</p>
+<label class="option"><input type="radio" name="q4" value="a"> N</label>
+<label class="option"><input type="radio" name="q4" value="b"> J</label>
+<label class="option"><input type="radio" name="q4" value="c"> C</label>
+<label class="option"><input type="radio" name="q4" value="d"> N/C</label>
+<div class="result"></div>
+</div>
+
+<!-- Q5 -->
+<div class="question" data-answer="b">
+<p>5. Coulomb’s law is valid for?</p>
+<label class="option"><input type="radio" name="q5" value="a"> Large bodies</label>
+<label class="option"><input type="radio" name="q5" value="b"> Point charges</label>
+<label class="option"><input type="radio" name="q5" value="c"> Currents</label>
+<label class="option"><input type="radio" name="q5" value="d"> Fields</label>
+<div class="result"></div>
+</div>
+
+<!-- Q6 -->
+<div class="question" data-answer="a">
+<p>6. Electric field is a?</p>
+<label class="option"><input type="radio" name="q6" value="a"> Vector quantity</label>
+<label class="option"><input type="radio" name="q6" value="b"> Scalar quantity</label>
+<label class="option"><input type="radio" name="q6" value="c"> Constant</label>
+<label class="option"><input type="radio" name="q6" value="d"> None</label>
+<div class="result"></div>
+</div>
+
+<!-- Q7 -->
+<div class="question" data-answer="c">
+<p>7. Value of ε₀ is?</p>
+<label class="option"><input type="radio" name="q7" value="a"> 9 × 10⁹</label>
+<label class="option"><input type="radio" name="q7" value="b"> 1.6 × 10⁻¹⁹</label>
+<label class="option"><input type="radio" name="q7" value="c"> 8.85 × 10⁻¹²</label>
+<label class="option"><input type="radio" name="q7" value="d"> 10⁻⁶</label>
+<div class="result"></div>
+</div>
+
+<!-- Q8 -->
+<div class="question" data-answer="b">
+<p>8. Electric field lines start from?</p>
+<label class="option"><input type="radio" name="q8" value="a"> Negative charge</label>
+<label class="option"><input type="radio" name="q8" value="b"> Positive charge</label>
+<label class="option"><input type="radio" name="q8" value="c"> Neutral body</label>
+<label class="option"><input type="radio" name="q8" value="d"> Earth</label>
+<div class="result"></div>
+</div>
+
+<!-- Q9 -->
+<div class="question" data-answer="d">
+<p>9. SI unit of electric potential is?</p>
+<label class="option"><input type="radio" name="q9" value="a"> Joule</label>
+<label class="option"><input type="radio" name="q9" value="b"> Coulomb</label>
+<label class="option"><input type="radio" name="q9" value="c"> Ampere</label>
+<label class="option"><input type="radio" name="q9" value="d"> Volt</label>
+<div class="result"></div>
+</div>
+
+<!-- Q10 -->
+<div class="question" data-answer="a">
+<p>10. Electric force is?</p>
+<label class="option"><input type="radio" name="q10" value="a"> Conservative</label>
+<label class="option"><input type="radio" name="q10" value="b"> Non-conservative</label>
+<label class="option"><input type="radio" name="q10" value="c"> Variable</label>
+<label class="option"><input type="radio" name="q10" value="d"> Zero</label>
+<div class="result"></div>
+</div>
+
+<a href="index.html" class="btn">⬅ Back</a>
+
+</section>
+
+<script>
+const questions = document.querySelectorAll(".question");
+
+questions.forEach(q=>{
+    const correct = q.dataset.answer;
+    const options = q.querySelectorAll("input");
+    const result = q.querySelector(".result");
+
+    options.forEach(opt=>{
+        opt.addEventListener("change", ()=>{
+            if(opt.value === correct){
+                result.textContent = "✅ Correct Answer";
+                result.className = "result correct";
+            }else{
+                result.textContent = "❌ Wrong Answer";
+                result.className = "result wrong";
+            }
+        });
+    });
+});
+</script>
+
+</body>
+</html>
+
