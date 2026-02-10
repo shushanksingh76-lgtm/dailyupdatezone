@@ -72,15 +72,15 @@ section h2{
     color:#aefeff;
 }
 
-/* ===== PROJECT ===== */
-.project{
+/* ===== PROJECT / COURSE CARDS ===== */
+.project, .course-card{
     background:rgba(255,255,255,0.15);
     padding:15px;
     border-radius:14px;
     margin-top:10px;
+    text-align:center;
 }
 
-/* ===== BUTTON ===== */
 .btn{
     display:inline-block;
     margin-top:15px;
@@ -97,6 +97,23 @@ section h2{
     transform:scale(1.08);
 }
 
+/* ===== COURSE GRID ===== */
+.course-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+    margin-top:15px;
+}
+.course-card{
+    width:280px;
+    transition: transform 0.3s, background 0.3s;
+}
+.course-card:hover{
+    transform: translateY(-10px);
+    background: rgba(255,255,255,0.25);
+}
+
 /* ===== FOOTER ===== */
 footer{
     text-align:center;
@@ -109,6 +126,7 @@ footer{
 @media(max-width:600px){
     header h1{font-size:32px;}
     section{margin:15px;}
+    .course-card{width:90%;}
 }
 </style>
 </head>
@@ -129,7 +147,35 @@ footer{
 </section>
 
 <section>
-    <h2>📂 Projects</h2>
+    <h2>📂 Paid Courses</h2>
+    <div class="course-container">
+
+        <!-- Class 10 -->
+        <div class="course-card">
+            <strong>कक्षा 10</strong>
+            <p>Disha ke sabhi notes class 10th ke baccho ke liye</p>
+            <a href="class10.html" class="btn">View Course</a>
+        </div>
+
+        <!-- Class 11 -->
+        <div class="course-card">
+            <strong>कक्षा 11</strong>
+            <p>Disha ke sabhi notes class 11th ke baccho ke liye</p>
+            <a href="class11.html" class="btn">View Course</a>
+        </div>
+
+        <!-- Class 12 -->
+        <div class="course-card">
+            <strong>कक्षा 12</strong>
+            <p>Disha ke sabhi notes class 12th ke baccho ke liye</p>
+            <a href="class12.html" class="btn">View Course</a>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <h2>📂 Other Projects</h2>
 
     <div class="project">
         <strong>Daily Update Zone</strong>
@@ -143,7 +189,6 @@ footer{
         <a href="study-material.html" class="btn">Open Page</a>
     </div>
 
-    <!-- ✅ NEW QUIZ PROJECT ADDED -->
     <div class="project">
         <strong>Online Quiz</strong>
         <p>Subject-wise quiz for practice and self-evaluation.</p>
@@ -151,43 +196,16 @@ footer{
     </div>
 </section>
 
-<!-- ✅ NEW GUIDELINES SECTION -->
 <section>
     <h2>📌 Guidelines</h2>
-    <p>  
-       <ul>
-    <li>
-        If you see 404 Error or Not Found on any page, it means that the page or the chapter of that subject has not been uploaded yet.<br>
-        यदि आपको किसी पेज पर 404 Error या Not Found दिखाई देता है, तो इसका मतलब है कि उस पेज या उस विषय के अध्याय को अभी अपलोड नहीं किया गया है।
-    </li>
-
-    <li>
-        All notes and quizzes are prepared for educational purpose only.<br>
-        सभी नोट्स और क्विज केवल शैक्षणिक उद्देश्य के लिए तैयार किए गए हैं।
-    </li>
-
-    <li>
-        Content is based on Bihar Board syllabus.<br>
-        सभी सामग्री बिहार बोर्ड के पाठ्यक्रम पर आधारित है।
-    </li>
-
-    <li>
-        Students should verify important updates from official sources.<br>
-        छात्रों को महत्वपूर्ण अपडेट आधिकारिक स्रोतों से अवश्य जांच लेने चाहिए।
-    </li>
-
-    <li>
-        Do not misuse content or copy without permission.<br>
-        सामग्री का दुरुपयोग या बिना अनुमति कॉपी करना मना है।
-    </li>
-
-    <li>
-        For any issue or suggestion, contact us.<br>
-        किसी भी समस्या या सुझाव के लिए हमसे संपर्क करें।
-    </li>
-</ul>
-        
-    </p>
+    <ul>
+        <li>If you see 404 Error or Not Found on any page, it means page/chapter not uploaded yet.<br>यदि आपको किसी पेज पर 404 Error या Not Found दिखाई देता है, तो इसका मतलब है कि उस पेज या उस विषय के अध्याय को अभी अपलोड नहीं किया गया है।</li>
+        <li>All notes and quizzes are prepared for educational purpose only.<br>सभी नोट्स और क्विज केवल शैक्षणिक उद्देश्य के लिए तैयार किए गए हैं।</li>
+        <li>Content is based on Bihar Board syllabus.<br>सभी सामग्री बिहार बोर्ड के पाठ्यक्रम पर आधारित है।</li>
+        <li>Students should verify important updates from official sources.<br>छात्रों को महत्वपूर्ण अपडेट आधिकारिक स्रोतों से अवश्य जांच लेने चाहिए।</li>
+        <li>Do not misuse content or copy without permission.<br>सामग्री का दुरुपयोग या बिना अनुमति कॉपी करना मना है।</li>
+        <li>For any issue or suggestion, contact us.<br>किसी भी समस्या या सुझाव के लिए हमसे संपर्क करें।</li>
+    </ul>
 </section>
 
 <section>
