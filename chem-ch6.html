@@ -1,1 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student's Library Zone</title>
+
+<style>
+body{
+margin:0;
+font-family:Segoe UI;
+background:linear-gradient(120deg,#0f2027,#203a43,#2c5364);
+color:white;
+text-align:center;
+}
+
+header{
+padding:40px;
+background:rgba(0,0,0,0.4);
+}
+
+h1{color:gold;font-size:42px;}
+
+.card{
+background:rgba(255,255,255,0.08);
+padding:25px;
+margin:25px auto;
+max-width:900px;
+border-radius:15px;
+box-shadow:0 0 20px rgba(0,0,0,0.5);
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+th,td{
+padding:14px;
+border-bottom:1px solid rgba(255,255,255,0.2);
+}
+
+th{color:gold;}
+
+del{color:#ff7675;}
+
+.discount{
+color:#00ffae;
+font-weight:bold;
+animation:blink 1s infinite alternate;
+}
+
+@keyframes blink{
+from{opacity:1;}
+to{opacity:0.4;}
+}
+
+.offerBadge{
+background:red;
+display:inline-block;
+padding:12px 25px;
+border-radius:50px;
+font-size:22px;
+font-weight:bold;
+animation:glow 1.5s infinite alternate;
+}
+
+@keyframes glow{
+from{box-shadow:0 0 10px red;}
+to{box-shadow:0 0 25px yellow;}
+}
+
+.timer{
+font-size:26px;
+color:#00e5ff;
+margin-top:15px;
+}
+
+.btn{
+display:inline-block;
+margin-top:15px;
+padding:12px 25px;
+background:#00c853;
+border-radius:30px;
+color:white;
+text-decoration:none;
+}
+
+.btn:hover{background:#009624;}
+
+.rules{
+text-align:left;
+line-height:1.9;
+}
+
+footer{
+background:rgba(0,0,0,0.4);
+padding:20px;
+margin-top:40px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Student's Library Zone</h1>
+<h3>Chainpur, Siwan</h3>
+</header>
+
+<div class="card">
+<h2 style="color:gold;">⚡ Limited Time Discount Offer Running</h2>
+
+<div class="offerBadge">🔥 MEGA OFFER 🔥</div>
+
+<div class="timer" id="countdown"></div>
+</div>
+
+
+<div class="card">
+<h2>Timing & Fees</h2>
+
+<table>
+<tr>
+<th>Shift</th>
+<th>Timing</th>
+<th>Hours</th>
+<th>Offer Price</th>
+</tr>
+
+<tr>
+<td>1st</td>
+<td>7AM–12PM</td>
+<td>5h</td>
+<td><del>₹389</del> <span class="discount">10% OFF → ₹350</span></td>
+</tr>
+
+<tr>
+<td>2nd</td>
+<td>12PM–5PM</td>
+<td>5h</td>
+<td><del>₹445</del> <span class="discount">10% OFF → ₹400</span></td>
+</tr>
+
+<tr>
+<td>3rd</td>
+<td>4PM–9PM</td>
+<td>5h</td>
+<td><del>₹389</del> <span class="discount">10% OFF → ₹350</span></td>
+</tr>
+
+<tr>
+<td>Any Two</td>
+<td>Flexible</td>
+<td>10h</td>
+<td><del>₹667</del> <span class="discount">10% OFF → ₹600</span></td>
+</tr>
+
+<tr>
+<td>All Shift</td>
+<td>24h</td>
+<td>Full</td>
+<td><del>₹1333</del> <span class="discount">10% OFF → ₹1200</span></td>
+</tr>
+
+<tr>
+<td>Night</td>
+<td>7PM–7AM</td>
+<td>12h</td>
+<td><del>₹556</del> <span class="discount">10% OFF → ₹500</span></td>
+</tr>
+
+</table>
+</div>
+
+
+<div class="card">
+<h2>Contact & Booking</h2>
+<p><b>Director:</b> Anish Bharti</p>
+<p><b>Phone:</b> 8797552277</p>
+
+<a class="btn" href="tel:8797552277">📞 Call Now</a><br>
+<a class="btn" href="https://wa.me/918797552277">💬 Book WhatsApp</a>
+</div>
+
+
+<div class="card">
+<h2>Library Rules</h2>
+<div class="rules">
+1. अपने सीट पर ही बैठें।<br>
+2. अंदर इधर-उधर न घूमें।<br>
+3. लाइट/Wifi कटे तो शोर न करें।<br>
+4. सीट छोड़ते समय कुर्सी अंदर करें व लाइट बंद करें।<br>
+5. साफ-सफाई रखें।<br>
+6. कुर्सी इधर-उधर न करें।<br>
+7. मोबाइल साइलेंट रखें।<br>
+8. फोन पर बात न करें।<br>
+9. किताब कॉपी बिना पूछे न लें।<br>
+10. अंदर बात न करें।<br>
+11. डायरी में उपस्थिति दर्ज करें।<br>
+12. जूता-चप्पल बाहर रखें।<br>
+13. लंच में 1st Floor जाएं।<br>
+14. कचरा डस्टबिन में डालें।
+</div>
+</div>
+
+<footer>
+© 2026 Student's Library Zone
+</footer>
+
+
+<script>
+// countdown timer 24 hour reset
+var end = new Date().getTime() + 86400000;
+
+var x = setInterval(function(){
+var now = new Date().getTime();
+var dist = end - now;
+
+var h = Math.floor((dist%(1000*60*60*24))/(1000*60*60));
+var m = Math.floor((dist%(1000*60*60))/(1000*60));
+var s = Math.floor((dist%(1000*60))/1000);
+
+document.getElementById("countdown").innerHTML =
+"⏳ Offer Ends In : "+h+"h "+m+"m "+s+"s";
+
+if(dist<0){
+clearInterval(x);
+document.getElementById("countdown").innerHTML="Offer Expired";
+}
+},1000);
+</script>
+
+</body>
+</html>
 
