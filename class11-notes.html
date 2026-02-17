@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Class 11 Bihar Board Notes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    color:white;
+    background: linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#1cb5e0);
+    background-size:400% 400%;
+    animation:bg 12s infinite;
+}
+@keyframes bg{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+header{
+    position:relative;
+    text-align:center;
+    padding:60px 20px;
+}
+header h1{
+    font-size:38px;
+    margin:0;
+}
+header p{
+    opacity:0.85;
+}
+
+.search-box{
+    position:absolute;
+    top:15px;
+    right:15px;
+}
+.search-box input{
+    padding:8px 14px;
+    border-radius:20px;
+    border:none;
+    outline:none;
+    font-size:14px;
+    width:180px;
+}
+.search-box input:focus{
+    width:220px;
+    transition:0.3s;
+}
+
+section{
+    background:rgba(255,255,255,0.12);
+    margin:20px;
+    padding:25px;
+    border-radius:18px;
+}
+
+.subject{
+    background:rgba(255,255,255,0.15);
+    padding:15px;
+    border-radius:14px;
+    margin:12px 0;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:10px;
+    padding:8px 20px;
+    border-radius:22px;
+    background:#00f2fe;
+    color:#000;
+    text-decoration:none;
+    font-weight:bold;
+}
+.btn:hover{
+    background:white;
+}
+
+footer{
+    text-align:center;
+    padding:15px;
+    font-size:14px;
+    opacity:0.85;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="search-box">
+<input type="text" id="searchInput" placeholder="Search subject...">
+</div>
+
+<h1>📘 Class 11 Bihar Board Notes</h1>
+<p>All Subjects • Free Notes • MCQ • PDF</p>
+</header>
+
+<section>
+
+<div class="subject">
+<strong>📐 Mathematics</strong>
+<p>Chapter-wise Maths Notes</p>
+<a href="class11-maths.html" class="btn">Open</a>
+</div>
+
+<div class="subject">
+<strong>⚛ Physics</strong>
+<p>Theory + Numericals + MCQ</p>
+<a href="class11-physics.html" class="btn">Open</a>
+</div>
+
+<div class="subject">
+<strong>🧪 Chemistry</strong>
+<p>Organic + Inorganic + Physical</p>
+<a href="class11-chemistry.html" class="btn">Open</a>
+</div>
+
+<div class="subject">
+<strong>🌱 Biology</strong>
+<p>Botany + Zoology Notes</p>
+<a href="class11-biology.html" class="btn">Open</a>
+</div>
+
+<div class="subject">
+<strong>📖 Hindi</strong>
+<p>गद्य + पद्य </p>
+<a href="class11-hindi.html" class="btn">Open</a>
+</div>
+
+<div class="subject">
+<strong>📘 English</strong>
+<p>Prose + Poetry</p>
+<a href="class11-english.html" class="btn">Open</a>
+</div>
+
+</section>
+
+<footer>
+© 2026 Daily Update Zone | Bihar Board Class 11
+</footer>
+
+<script>
+const searchInput = document.getElementById("searchInput");
+
+searchInput.addEventListener("keyup", function () {
+    const value = searchInput.value.toLowerCase();
+    const subjects = document.querySelectorAll(".subject");
+
+    subjects.forEach(item => {
+        const text = item.innerText.toLowerCase();
+        item.style.display = text.includes(value) ? "block" : "none";
+    });
+});
+</script>
+
+<a href="study-material.html">⬅ Back</a>
+
+</body>
+</html>
