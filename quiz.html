@@ -2,49 +2,68 @@
 <html lang="hi">
 <head>
 <meta charset="UTF-8">
-<title>Online Physics Quiz | Daily Update Zone</title>
+<title>Ultimate Quiz Pro Max</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 body{
-    margin:0;
-    font-family: Arial, sans-serif;
-    color:white;
-    background:linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#1cb5e0);
-    background-size:400% 400%;
-    animation:bg 12s infinite;
+margin:0;
+font-family:Arial;
+color:white;
+background:linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#1cb5e0);
+background-size:400% 400%;
+animation:bg 12s infinite;
 }
 @keyframes bg{
-    0%{background-position:0% 50%;}
-    50%{background-position:100% 50%;}
-    100%{background-position:0% 50%;}
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
 }
-header{text-align:center;padding:40px 20px;}
+header{text-align:center;padding:20px;}
 section{
-    background:rgba(255,255,255,0.12);
-    margin:20px;
-    padding:25px;
-    border-radius:18px;
+background:rgba(255,255,255,0.12);
+margin:20px;
+padding:25px;
+border-radius:18px;
 }
 .question{
-    background:rgba(255,255,255,0.15);
-    padding:15px;
-    margin:15px 0;
-    border-radius:14px;
+background:rgba(255,255,255,0.15);
+padding:15px;
+margin:15px 0;
+border-radius:14px;
 }
 .option{display:block;margin:6px 0;cursor:pointer;}
 .correct{color:#00ff9d;font-weight:bold;}
 .wrong{color:#ff4d4d;font-weight:bold;}
-.score{font-weight:bold;margin:10px 0;}
+
 .btn{
-    display:inline-block;
-    margin-top:20px;
-    padding:10px 22px;
-    border-radius:25px;
-    background:#00f2fe;
-    color:#000;
-    text-decoration:none;
-    font-weight:bold;
+padding:10px 22px;
+border-radius:25px;
+background:#00f2fe;
+border:none;
+font-weight:bold;
+cursor:pointer;
+margin:10px;
+}
+
+.progress{
+height:12px;
+background:#ffffff33;
+border-radius:20px;
+margin-top:10px;
+overflow:hidden;
+}
+.bar{
+height:100%;
+width:0%;
+background:#00ffd5;
+}
+
+input[type=text]{
+padding:10px;
+border-radius:20px;
+border:none;
+margin-top:10px;
 }
 </style>
 </head>
@@ -52,86 +71,181 @@ section{
 <body>
 
 <header>
-<h1>⚛ Physics Online Quiz</h1>
-<p>Class 12 | Bihar Board</p>
-<div class="score">⭐ Score: <span id="score">0</span> / 30</div>
+<h2>🏆 Ultimate Quiz</h2>
+
+<div id="loginBox">
+<input type="text" id="username" placeholder="अपना नाम लिखें">
+<br>
+<button class="btn" onclick="startQuiz()">Start Quiz</button>
+</div>
+
+<div id="quizBox" style="display:none">
+
+⏱ <span id="time">02:00</span>
+
+<div class="progress"><div class="bar" id="bar"></div></div>
+Answered: <span id="count">0</span>/25
+
+</div>
 </header>
 
 <section id="quiz"></section>
 
 <div style="text-align:center">
-<a href="index.html" class="btn">⬅ Back</a>
+<button onclick="finishQuiz()" class="btn" id="resultBtn" disabled>Result</button>
+<button onclick="location.reload()" class="btn">Retry</button>
 </div>
 
+<section>
+<h3>🏅 Leaderboard</h3>
+<ul id="leaderboard"></ul>
+</section>
+
 <script>
-const questions = [
-["विद्युत आवेश की SI इकाई क्या है?",["कूलॉम","वोल्ट","ओम","एम्पियर"],0],
-["इलेक्ट्रॉन का आवेश कितना होता है?",["-1.6×10⁻¹⁹ C","+1.6×10⁻¹⁹ C","0","1 C"],0],
-["ओम का नियम क्या है?",["V = IR","P = VI","F = ma","E = mc²"],0],
-["विद्युत क्षेत्र की SI इकाई क्या है?",["N/C","J","W","V"],0],
-["प्रकाश की चाल निर्वात में कितनी है?",["3×10⁸ m/s","3×10⁶ m/s","10⁸ m/s","3×10⁵ m/s"],0],
-["विद्युत शक्ति की इकाई?",["जूल","वाट","वोल्ट","ओम"],1],
-["धारा की SI इकाई?",["एम्पियर","वोल्ट","ओम","वाट"],0],
-["AC की आवृत्ति भारत में कितनी है?",["60 Hz","50 Hz","100 Hz","25 Hz"],1],
-["कैपेसिटर में ऊर्जा किस रूप में संचित होती है?",["विद्युत क्षेत्र","चुंबकीय क्षेत्र","ऊष्मा","प्रकाश"],0],
-["चुंबकीय क्षेत्र की SI इकाई?",["टेस्ला","वेबर","हेनरी","ओम"],0],
+const correctSound=new Audio("https://actions.google.com/sounds/v1/cartoon/clang_and_wobble.ogg");
+const wrongSound=new Audio("https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg");
 
-["विद्युत विभव का सूत्र?",["W/q","q/W","IR","VI"],0],
-["धारा क्या है?",["आवेश का प्रवाह","ऊर्जा","बल","विभव"],0],
-["कूलॉम का नियम संबंधित है?",["आवेश से","द्रव्यमान से","ऊर्जा से","चुंबक से"],0],
-["प्रोटॉन का आवेश?",["+1.6×10⁻¹⁹ C","-1.6×10⁻¹⁹ C","0","2 C"],0],
-["विद्युत प्रतिरोध निर्भर करता है?",["लंबाई पर","ताप पर","क्षेत्रफल पर","सभी पर"],3],
+let username="";
+function startQuiz(){
+username=document.getElementById("username").value;
+if(username==""){alert("नाम लिखो");return;}
+document.getElementById("loginBox").style.display="none";
+document.getElementById("quizBox").style.display="block";
+}
 
-["ओम की इकाई किसकी है?",["प्रतिरोध","धारा","वोल्टेज","शक्ति"],0],
-["फ्यूज तार किस धातु का होता है?",["टिन-सीसा मिश्र","तांबा","लोहा","एल्यूमिनियम"],0],
-["विद्युत मीटर किसे मापता है?",["ऊर्जा","धारा","वोल्टेज","प्रतिरोध"],0],
-["विद्युत बल किस नियम पर आधारित है?",["कूलॉम","न्यूटन","फैराडे","ओम"],0],
-["धारा घनत्व का सूत्र?",["I/A","V/I","IR","A/I"],0],
+/* QUESTIONS */
+const questions=[
 
-["चुंबकीय फ्लक्स की इकाई?",["वेबर","टेस्ला","हेनरी","वाट"],0],
-["विद्युत धारा की दिशा?",["धन से ऋण","ऋण से धन","दोनों","कोई नहीं"],0],
-["बैटरी किस ऊर्जा को बदलती है?",["रासायनिक → विद्युत","यांत्रिक → ऊष्मा","प्रकाश → विद्युत","ऊष्मा → प्रकाश"],0],
-["सेमीकंडक्टर का उदाहरण?",["सिलिकॉन","लोहा","तांबा","लकड़ी"],0],
-["विद्युत परिपथ में स्विच का काम?",["धारा चालू/बंद","वोल्ट बढ़ाना","प्रतिरोध घटाना","ऊर्जा बढ़ाना"],0],
+["π का मान?",["3.14","2","4","1"],0],
+["√25=?",["5","4","6","7"],0],
+["10×10=?",["100","20","10","200"],0],
+["त्रिभुज कोण योग?",["180","360","90","270"],0],
+["9×9=?",["81","72","99","69"],0],
 
-["कंडक्टर में धारा क्यों बहती है?",["मुक्त इलेक्ट्रॉन","प्रोटॉन","न्यूट्रॉन","आयन"],0],
-["विद्युत क्षेत्र रेखाएँ निकलती हैं?",["धन आवेश से","ऋण आवेश से","दोनों से","कोई नहीं"],0],
-["कैपेसिटेंस की SI इकाई?",["फैराड","ओम","हेनरी","वोल्ट"],0],
-["विद्युत हीटर में कौन सा प्रभाव?",["ऊष्मीय प्रभाव","चुंबकीय","रासायनिक","प्रकाशीय"],0]
+["प्रकाश चाल?",["3×10⁸","10⁶","10⁵","10⁷"],0],
+["धारा इकाई?",["एम्पियर","वोल्ट","ओम","वाट"],0],
+["बल सूत्र?",["F=ma","E=mc²","V=IR","P=W"],0],
+["ऊर्जा इकाई?",["जूल","मीटर","सेकंड","न्यूटन"],0],
+["चुंबकीय इकाई?",["टेस्ला","ओम","वोल्ट","जूल"],0],
+
+["H₂O?",["जल","नमक","गैस","धातु"],0],
+["NaCl?",["नमक","चीनी","एसिड","क्षार"],0],
+["pH 7?",["तटस्थ","अम्ल","क्षार","धातु"],0],
+["हल्की गैस?",["हाइड्रोजन","ऑक्सीजन","नाइट्रोजन","CO₂"],0],
+["CO₂?",["कार्बन डाइऑक्साइड","ऑक्सीजन","मीथेन","हाइड्रोजन"],0],
+
+["हृदय कक्ष?",["4","2","3","5"],0],
+["रक्त रंग?",["लाल","नीला","हरा","पीला"],0],
+["पौधे भोजन?",["प्रकाश संश्लेषण","श्वसन","अपघटन","वाष्प"],0],
+["DNA पूरा नाम?",["डीऑक्सीराइबो न्यूक्लिक अम्ल","डायनमिक","डबल","न्यूक्लियर"],0],
+["सबसे बड़ी हड्डी?",["फीमर","रीढ़","खोपड़ी","हाथ"],0],
+
+["संज्ञा?",["नाम शब्द","क्रिया","विशेषण","अव्यय"],0],
+["राम क्या है?",["संज्ञा","क्रिया","विशेषण","सर्वनाम"],0],
+["दिन विलोम?",["रात","सूरज","चाँद","शाम"],0],
+["जल पर्याय?",["पानी","आग","हवा","धूप"],0],
+["क्रिया?",["खाना","सुंदर","लाल","धीरे"],0]
+
 ];
 
-let score=0;
+let score=0,answered=0;
+const total=questions.length;
 const quiz=document.getElementById("quiz");
 
-questions.forEach((q,i)=>{
-    const div=document.createElement("div");
-    div.className="question";
-    div.innerHTML=`<p>${i+1}. ${q[0]}</p>`+
-    q[1].map((o,j)=>`
-    <label class="option">
-    <input type="radio" name="q${i}" value="${j}"> ${o}
-    </label>`).join("")+
-    `<div class="result"></div>`;
-    quiz.appendChild(div);
+/* TIMER SAVE */
+let savedTime=localStorage.getItem("quizTime");
+let time=savedTime?parseInt(savedTime):120;
 
-    div.querySelectorAll("input").forEach(inp=>{
-        inp.addEventListener("change",()=>{
-            const res=div.querySelector(".result");
-            if(inp.value==q[2]){
-                if(!div.classList.contains("done")){
-                    score++;
-                    document.getElementById("score").textContent=score;
-                }
-                res.textContent="✅ सही उत्तर";
-                res.className="correct";
-            }else{
-                res.textContent="❌ गलत उत्तर";
-                res.className="wrong";
-            }
-            div.classList.add("done");
-        });
-    });
+const timer=setInterval(()=>{
+let m=Math.floor(time/60);
+let s=time%60;
+document.getElementById("time").textContent=`${m}:${s<10?"0"+s:s}`;
+localStorage.setItem("quizTime",time);
+time--;
+if(time<0) finishQuiz();
+},1000);
+
+/* LOAD QUESTIONS */
+questions.forEach((q,i)=>{
+const div=document.createElement("div");
+div.className="question";
+div.innerHTML=`<p>${i+1}. ${q[0]}</p>`+
+q[1].map((o,j)=>`
+<label class="option">
+<input type="radio" name="q${i}" value="${j}"> ${o}
+</label>`).join("")+
+`<div class="result"></div>`;
+quiz.appendChild(div);
+
+div.querySelectorAll("input").forEach(inp=>{
+inp.addEventListener("change",()=>{
+if(div.classList.contains("done")) return;
+
+const res=div.querySelector(".result");
+
+if(inp.value==q[2]){
+score++;
+correctSound.play();
+res.textContent="✔ सही";
+res.className="correct";
+}else{
+wrongSound.play();
+res.textContent="✘ गलत";
+res.className="wrong";
+}
+
+div.classList.add("done");
+answered++;
+document.getElementById("count").textContent=answered;
+document.getElementById("bar").style.width=(answered/total*100)+"%";
+
+document.getElementById("resultBtn").disabled=false;
 });
+});
+});
+
+/* FINISH */
+function finishQuiz(){
+clearInterval(timer);
+localStorage.removeItem("quizTime");
+
+let percent=Math.round(score/total*100);
+let grade=percent>=80?"A":percent>=60?"B":percent>=40?"C":"Fail";
+
+saveScore(username,score);
+showBoard();
+
+downloadCertificate(username,percent,grade);
+
+alert(`Score: ${score}/${total}
+${percent}% Grade:${grade}`);
+}
+
+/* LEADERBOARD */
+function saveScore(name,score){
+let data=JSON.parse(localStorage.getItem("leaderboard")||"[]");
+data.push({name,score});
+data.sort((a,b)=>b.score-a.score);
+localStorage.setItem("leaderboard",JSON.stringify(data.slice(0,5)));
+}
+
+function showBoard(){
+let data=JSON.parse(localStorage.getItem("leaderboard")||"[]");
+let html="";
+data.forEach(s=>html+=`<li>${s.name} — ${s.score}</li>`);
+document.getElementById("leaderboard").innerHTML=html;
+}
+showBoard();
+
+/* CERTIFICATE */
+function downloadCertificate(name,percent,grade){
+let text=`Certificate\n\n${name}\nScore: ${percent}%\nGrade: ${grade}`;
+let blob=new Blob([text],{type:"text/plain"});
+let a=document.createElement("a");
+a.href=URL.createObjectURL(blob);
+a.download="certificate.txt";
+a.click();
+}
 </script>
 
 </body>
