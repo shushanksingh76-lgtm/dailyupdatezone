@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Frenkel Defect Advanced</title>
+<style>
+  body {
+    background: #0f172a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    font-family: Arial;
+  }
+
+  .container {
+    text-align: center;
+  }
+
+  .lattice {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    margin: auto;
+    border: 2px solid white;
+  }
+
+  .atom {
+    width: 25px;
+    height: 25px;
+    background: cyan;
+    border-radius: 50%;
+    position: absolute;
+  }
+
+  /* Fixed atoms (lattice structure) */
+  .a1 { top: 40px; left: 40px; }
+  .a2 { top: 40px; left: 120px; }
+  .a3 { top: 40px; left: 200px; }
+
+  .a4 { top: 120px; left: 40px; }
+  .a5 { top: 120px; left: 120px; }
+  .a6 { top: 120px; left: 200px; }
+
+  .a7 { top: 200px; left: 40px; }
+  .a8 { top: 200px; left: 120px; }
+  .a9 { top: 200px; left: 200px; }
+
+  /* Moving atom (Frenkel defect) */
+  .moving {
+    background: yellow;
+    animation: move 4s infinite alternate ease-in-out;
+  }
+
+  /* Vacancy */
+  .vacancy {
+    width: 25px;
+    height: 25px;
+    border: 2px dashed red;
+    border-radius: 50%;
+    position: absolute;
+    top: 120px;
+    left: 120px;
+  }
+
+  @keyframes move {
+    0% {
+      top: 120px;
+      left: 120px;
+    }
+    100% {
+      top: 160px;
+      left: 250px;
+    }
+  }
+
+  .label {
+    margin-top: 15px;
+    font-size: 16px;
+  }
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h2>Frenkel Defect Animation</h2>
+
+  <div class="lattice">
+    <div class="atom a1"></div>
+    <div class="atom a2"></div>
+    <div class="atom a3"></div>
+
+    <div class="atom a4"></div>
+    <div class="vacancy"></div>
+    <div class="atom a6"></div>
+
+    <div class="atom a7"></div>
+    <div class="atom a8"></div>
+    <div class="atom a9"></div>
+
+    <!-- Moving atom -->
+    <div class="atom moving"></div>
+  </div>
+
+  <div class="label">
+    Yellow atom leaves its position → Vacancy (Red) + Interstitial position
+  </div>
+</div>
+
+</body>
+</html>
